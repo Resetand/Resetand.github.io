@@ -6,7 +6,7 @@ Super mega developer i am. So here my sites
 + [Nav bar](Resetand.github.io/Fixed-menu/)
 
     Навбар фикс
-+ [Navigation menu](Resetand.github.io/Navigation menu/)
++ [Navigation menu](Resetand.github.io/Navigation-menu/)
 
     Просто меню навигации
 + [Rabbit](Resetand.github.io/Rabbit/)
