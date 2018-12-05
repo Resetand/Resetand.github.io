@@ -48,12 +48,12 @@ $(document).ready(function () {
                 if (counter % 2 === 1){
                     timeNow = timeRest;
                     $("#site-ico").attr("href", "img/green.ico")
-                    $('.logo').html('<img src="/img/logo_rest.png" alt="logo"></img>');
+                    $('.logo').html('<img src="img/logo_rest.png" alt="logo"><img>');
                 }
                 else{
                     timeNow = time;
                     $("#site-ico").attr("href", "img/red.ico")
-                    $('.logo').html('<img src="/img/logo_work.png" alt="logo"></img>');
+                    $('.logo').html('<img src="img/logo_work.png" alt="logo"><img>');
                 }
             
             }
@@ -72,8 +72,8 @@ $(document).ready(function () {
         timeNow = time;
         $('#time').html(convertForUser(timeNow));
         $("#start").removeClass('spawn-word');
-        $('.logo').html('<img src="/img/263863-200.png" alt="logo"></img>');
-        $("#site-ico").attr("href", "/img/white.ico")
+        $('.logo').html('<img src="img/263863-200.png" alt="logo"><img>');
+        $("#site-ico").attr("href", "img/white.ico")
     }
 
 
@@ -109,7 +109,7 @@ $(document).ready(function () {
 
     $('#start').on('click', function(event){
         event.preventDefault();
-        $('.logo').html('<img src="/img/logo_work.png" alt="logo"></img>');
+        $('.logo').html('<img src="img/logo_work.png" alt="logo"><img>');
         $("#site-ico").attr("href", "img/red.ico")
         $(this).toggleClass('spawn-word');
         start = !start;
