@@ -1,0 +1,104 @@
+// Медиа-запросы (desktop first)
+
+
+// ОТ 1450 И НИЖЕ
+@media (max-width: 1450px) {  
+    .slick-next{
+        right: 30px;
+    }
+    .slick-prev{
+        left: 0;
+    }
+}
+
+
+// ОТ 1199 И НИЖЕ
+@media (max-width: 1199.98px) {  
+    .slick-prev, .slick-next{
+        &::before{
+            height: em(50);
+            width: em(40);
+        }
+    }
+    .alt-menu__hidden-nemu-btn{
+        display: block;
+    }
+    .mobile-right {
+        padding: 0;
+        margin-bottom: 50px;
+    }
+}
+
+// ОТ 991 И НИЖЕ
+@media (max-width: 991.98px) {
+    .about-item{
+        min-height: 250px;
+    }
+   
+}
+    
+   
+
+// ОТ 767 И НИЖЕ
+@media (max-width: 767.98px) { 
+    .header-slider{
+        margin-top: 45%;
+    }
+    .search-input{
+        width: 80% !important;
+    }
+    .slick-prev::before, .slick-next::before{
+        display: none;
+    }
+    .about-item{
+        min-height: 200px;
+    }
+    .s-shortcodes .cards-block{
+        min-height: unset;
+        .card-right{
+            display: none;
+        }
+        .card-left{
+            display: none;
+        }
+        .card-middle{
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 200px;
+            margin-bottom: 20px;
+        }
+        
+        
+    }
+    .menu-scroll{
+        
+        transition: none;
+    }
+    .logo__icon{
+        transform: scale(.7)
+    }
+}
+
+// ОТ 575 И НИЖЕ
+@media (max-width: 575.98px) {  
+    .s-video{
+        .video-comp{
+            &__icon{
+                transform: scale(.8)
+            }
+        }
+        height: 50vh;
+    }
+    .logo__text{
+        display: none;
+    }
+    .header-slider{
+        font-size: 12px;
+    }
+    .wp-container{
+        text-align: center;
+        flex-direction: column;
+    }
+  
+}
