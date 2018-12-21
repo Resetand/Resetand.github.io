@@ -1,0 +1,82 @@
+*{font-family: sans-serif; margin: 0; padding: 0;}
+.m0{margin: 0;}
+.p0{padding: 0;}
+a{text-decoration: none;color:#000;}
+a:hover{text-decoration: none;color:#000;}
+.f10{font-size: 10px;}
+.f11{font-size: 11px;}
+.f12{font-size: 12px;}
+.f13{font-size: 13px;}
+.f14{font-size: 14px;}
+.f15{font-size: 15px;}
+.f16{font-size: 16px;}
+.f17{font-size: 17px;}
+.f18{font-size: 18px;}
+.f19{font-size: 19px;}
+.f20{font-size: 20px;}
+.f21{font-size: 21px;}
+.f22{font-size: 22px;}
+.f23{font-size: 23px;}
+.f24{font-size: 24px;}
+.f25{font-size: 25px;}
+.f26{font-size: 26px;}
+.f27{font-size: 27px;}
+.f28{font-size: 28px;}
+.f29{font-size: 29px;}
+.f30{font-size: 30px;}
+.f32{font-size: 32px;}
+.f34{font-size: 34px;}
+.f36{font-size: 36px;}
+.f38{font-size: 38px;}
+.f40{font-size: 40px;}
+.f42{font-size: 42px;}
+.f44{font-size: 44px;}
+.f46{font-size: 46px;}
+.f48{font-size: 48px;}
+.f50{font-size: 50px;}
+.f55{font-size: 55px;}
+.f60{font-size: 60px;}
+.f65{font-size: 65px;}
+.center{text-align: center;}
+.up{text-transform: uppercase;}
+.bold{font-weight: bold;}
+.normal{font-weight: 400;}
+.light{font-weight: 200;}
+.button a{padding: 10px;text-align: center;border: 1px solid rgba(0,0,0,0.4);border-radius: 5px;}
+.black{color: #000;}
+.white{color: #fff;}
+.serif{font-family:serif;}
+
+
+
+.flex{display: flex;}
+.f-col{flex-direction: column;}
+.f-colrev{flex-direction: column-reverse;}
+.wrap{flex-wrap: wrap;}
+
+.jc-start{justify-content: flex-start;}
+.jc-end{justify-content: flex-end;}
+.jc-center {justify-content: center;}
+.jc-spacebetween{justify-content: space-between;}
+.jc-spacearound{justify-content: space-around;}
+
+.ai-start{align-items: flex-start;}
+.ai-end{align-items: flex-end;}
+.ai-stretch{align-items: stretch;}
+.ai-center{align-items: center;	}
+
+.ac-start{align-content: flex-start;}
+.ac-end{align-content: flex-end;}
+.ac-center{align-content: center;}
+.ac-stretch {align-content: stretch;}
+.ac-spacebetween{align-content: space-between;}
+.ac-sapcearound{align-content: space-around;}
+
+.as-start{align-self: flex-start;}
+.as-center{align-self: center;}
+.as-end{align-self: flex-end;}
+.as-stretch{align-self: stretch;} 
+
+.js-start{justify-content: start;}
+.js-end{justify-self: end;}
+.js-center{justify-self: center;}

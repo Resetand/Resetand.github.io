@@ -1,0 +1,48 @@
+/*Медиазапросы*/
+
+/* LIBS*/
+
+/* ______________________________________ */ 
+
+
+
+/*Small devices от 576 и ниже*/
+@media (max-width: 576px) { 
+    .nav-menu{
+        display: none;
+    }
+    .hamburger-box{
+        display: block;
+    }
+ }
+/* ______________________________________ */ 
+
+/* Medium devices (от 576px до 768px)*/
+@media (max-width: 768px) and (min-width: 576px) { 
+    .hidden-nav{
+        width: 300px;
+    }
+ }
+/* ______________________________________ */ 
+
+/* Large devices (от 768px до 992px)*/
+@media (max-width: 992px) and (min-width: 768px){ 
+	.hidden-nav{
+        width: 300px;
+    }
+ }
+/* ______________________________________ */ 
+
+/* Extra large devices (от 992px до 1200px)*/
+@media (max-width: 1200px) and (min-width: 992px) { 
+    .hidden-nav{
+        width: 400px;
+    }
+ }
+
+ /*(1200px от и выше)*/
+ @media (min-width: 1200px){ 
+    .hidden-nav{
+        width: 500px;
+    }
+}
