@@ -1,0 +1,30 @@
+.result-comp .true-block{
+    background: #11c048 !important;
+}
+.result-block{
+    margin-bottom: 10px;
+    height: 15px;
+    text-align: center;
+    line-height: 15px;
+    border-radius: 7px;
+    width: 5%;
+    color: #fff;
+    background: rgb(5, 129, 255);
+    font-weight: bold;
+    font-size: 13px;
+    padding: 0;
+    transition: width .4s .2s;
+    list-style: none;
+}
+.result-block-wrap{
+    padding: 0;
+    padding-right: 3%;
+    margin: 0;
+    width: 60%;
+}
+.detail-form{
+    margin-left: 20px;
+}
+.detail-form .btn{
+    margin-left: -20px;
+}

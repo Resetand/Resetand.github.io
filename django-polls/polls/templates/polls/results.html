@@ -1,0 +1,21 @@
+{% extends 'polls/base.html' %}
+{% load static %}
+{% block title %}
+    Poll - result
+{% endblock title %}
+
+{% block content %}
+    <h1>{{ question.question_text }}</h1>
+
+    <ul class='result-block-wrap'>
+    {% for choice in question.choice_set.all %}
+        {% if choice.right %}
+             <div class="result-comp"><span>{{choice.choice_text}}: </span> <li class='true-block result-block'>{{ choice.votes }}</li></div>
+        {% else %}
+        <div class="result-comp"><span>{{choice.choice_text}}: </span> <li class='result-block'>{{ choice.votes }}</li></div>
+        {% endif %}
+    {% endfor %}
+    </ul>
+
+    <a class="btn btn-outline-primary mt-2" href="{% url 'polls:detail' question.id %}">Проголосовать еще раз?</a>
+{% endblock content %}

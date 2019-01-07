@@ -1,0 +1,29 @@
+{% extends 'polls/base.html' %}
+
+{% block title %}
+    {{ block.super }} - detail
+{% endblock title %}
+
+{% block content %}
+        <h1>{{ question.question_text }}</h1>
+        {% if question.choice_set.all %} 
+            {% if error_message %}
+                <div class="alert alert-danger" role="alert">
+                {{ error_message }}
+                </div>
+            {% endif %}
+            <form action="{% url 'polls:vote' question.id %}" method="post" class='detail-form'>
+            {% csrf_token %}
+            {% for choice in question.choice_set.all %}
+                <input type="radio" name="choice" id="choice{{ forloop.counter }}" class='form-check-input' value="{{ choice.id }}">
+                <label class="form-check-label" for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br>
+            {% endfor %}
+            <input class="btn btn-outline-primary mt-2" type="submit" value="Проголосовать">
+            </form>
+        {% else %}
+             <div class="alert alert-warning" role="alert">
+                Ответов пока нет!
+                </div>
+        {% endif %}
+{% endblock content %}
+ 

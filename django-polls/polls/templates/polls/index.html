@@ -1,0 +1,15 @@
+{% extends "polls/base.html" %}
+{% block title %}
+     {{ block.super }} - home 
+{% endblock title %}
+
+{% block content %}
+    <h1>Список опросов: </h1>
+    {% if latest_question_list %}
+        {% for question in latest_question_list %}
+            <h3><a href="{% url 'polls:detail' question.id %}"><span class="badge badge-primary">{{forloop.counter}}.  {{ question }}</span></a></h3> 
+        {% endfor %}
+    {% else %}
+        <p>No polls are available.</p>
+    {% endif %}
+{% endblock content %}
