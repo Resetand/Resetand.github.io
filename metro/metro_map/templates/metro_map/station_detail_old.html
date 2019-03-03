@@ -1,0 +1,136 @@
+<!-- {% extends 'metro_map/base.html' %}
+{% block left-options %}
+	{{ block.super }}
+{% endblock left-options %}
+{% block content %} -->
+
+
+		<div class="card-header station-detail_header">
+			{% if userstation != None %}
+				<h7 class="user-station-title">В списке посещещенных <i class="fas fa-check-circle fa-check-circle_style"></i></h7>
+			{% endif %}
+				<a	href="#" class='close-detail'><i class="fas fa-times"></i></a>
+		</div>
+		<div class="card-body station-details_body">
+			<div class="station-detail_top">
+					<h3 class="detail_title">{{choice_station.title}}</h3>
+					{% for line in choice_station.line.all %}
+					<div class="detail_line" style="background: {{ line.color }}">{{ line.number }}</div>
+					{% endfor %}
+			</div>
+			
+			{% if user.is_authenticated %}
+				
+				{% if userstation == None %}
+						<form action="{% url 'new_station' choice_station.slug %}" method="post">
+							{% csrf_token %}
+							{{ formaddstaion }}
+							<div class="text-center"><button type="submit" class="btn btn-success mt-2">Я посетил эту станцию</button></div>
+						</form>
+				{% else %}
+					<div class="when-visit">
+						Ты посетил ее <strong>{{ userstation.data_visit }}</strong> 
+					</div>
+					<div class="impressions-block mt-3">
+						{% if userstation.impressions %}
+							<div class="alert alert-dark" role="alert">
+								{{ userstation.impressions }}
+							</div>
+						{% endif %}
+					</div>
+				<button type="submit" class="btn btn-light mr-3">Изменить</button>
+					<form action="/remove-from-list/{{choice_station.slug}}/" method="post" >{% csrf_token %}<button type="submit" class="btn btn-danger">Удалить из списка</button></form>
+				{% endif %}
+					
+			{% else %}
+			<div class="alert alert-danger" role="alert">
+					Зарегестируйся или войди, чтобы добавить станцию, в список посещенных
+				</div>
+			{% endif %}
+		</div>
+
+
+
+
+
+
+<!-- <div class="map" id="map">
+		<svg viewBox='0 0 5972 6954.6665'>
+
+			{% for station in stations %}
+				{% if choice_station == station %}
+					{% if station.line.all|length == 1%}
+						<a href="{{ station.get_absolute_url }}" ><path class="station {{ station.slug }} v-1" d="{{ station.d }}" 
+							{% for line in station.line.all %}
+								style="stroke: {{ line.color }}; fill: {{ line.color }}; stroke-width: 10px;	opacity: 1;"
+							{% endfor %} /> </a>
+					{% elif station.line.all|length == 3 %}
+						<linearGradient id="for-{{ station.slug }}">
+							{% for line in station.line.all %}
+								{% if forloop.counter  == 1 %}
+									<stop offset="0%" stop-color="{{ line.color }}" />
+								{% elif forloop.counter == 2 %}
+									<stop offset="60%" stop-color="{{ line.color }}" /> 
+								{% else %}
+									<stop offset="100%" stop-color="{{ line.color }}" /> 
+								{% endif %}
+							{% endfor %}
+						</linearGradient>	
+						<a href="{{ station.get_absolute_url }}" ><path class="station {{ station.slug }} v-multi" stroke="url(#for-{{station.slug }})" fill="url(#for-{{station.slug }})" d="{{ station.d }}" style="opacity: 1; stroke-width: 10px;" /> </a>				
+					{% else %}
+						<linearGradient id="for-{{ station.slug }}">
+							{% for line in station.line.all %}
+								{% if forloop.counter  == 1 %}
+									<stop offset="0%" stop-color="{{ line.color }}" />
+								{% else %}
+									<stop offset="100%" stop-color="{{ line.color }}" /> 
+								{% endif %}
+							{% endfor %}
+						</linearGradient>
+						<a href="{{ station.get_absolute_url }}" ><path style="opacity: 1; stroke-width: 10px;"  class="station {{ station.slug }} v-multi" stroke="url(#for-{{station.slug }})" fill="url(#for-{{station.slug }})" d="{{ station.d }}" /> </a>				
+					{% endif %}
+				{% else %}
+					{% if station.line.all|length == 1%}
+						<a href="{{ station.get_absolute_url }}" ><path class="station {{ station.slug }} v-1" d="{{ station.d }}" 
+							{% for line in station.line.all %}
+								style="stroke: {{ line.color }}; fill: {{ line.color }}"
+							{% endfor %} /> </a>
+					{% elif station.line.all|length == 3 %}
+						<linearGradient id="for-{{ station.slug }}">
+							{% for line in station.line.all %}
+								{% if forloop.counter  == 1 %}
+									<stop offset="0%" stop-color="{{ line.color }}" />
+								{% elif forloop.counter == 2 %}
+									<stop offset="60%" stop-color="{{ line.color }}" /> 
+								{% else %}
+									<stop offset="100%" stop-color="{{ line.color }}" /> 
+								{% endif %}
+							{% endfor %}
+						</linearGradient>	
+						<a href="{{ station.get_absolute_url }}" ><path class="station {{ station.slug }} v-multi" stroke="url(#for-{{station.slug }})" fill="url(#for-{{station.slug }})" d="{{ station.d }}" /> </a>				
+					{% else %}
+						<linearGradient id="for-{{ station.slug }}">
+							{% for line in station.line.all %}
+								{% if forloop.counter  == 1 %}
+									<stop offset="0%" stop-color="{{ line.color }}" />
+								{% else %}
+									<stop offset="100%" stop-color="{{ line.color }}" /> 
+								{% endif %}
+							{% endfor %}
+						</linearGradient>
+						<a href="{{ station.get_absolute_url }}" ><path class="station {{ station.slug }} v-multi" stroke="url(#for-{{station.slug }})" fill="url(#for-{{station.slug }})" d="{{ station.d }}" /> </a>				
+					{% endif %}
+				{% endif %}
+			{% endfor %}
+				
+		</svg>
+	</div> -->
+<!-- {% endblock content %}
+
+{% block scriptblock %}
+	<script>
+			{% for user_station in userStations %}
+				$('.{{user_station.station.slug}}').addClass('visit_station');
+			{% endfor %}
+	</script>
+{% endblock scriptblock %} -->

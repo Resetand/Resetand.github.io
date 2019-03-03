@@ -24,7 +24,7 @@ a,a:focus,a:hover,a:active{
 	color: var(--text)
 }
 .MAINWRAP{
-	background: url("../img/Warstwa 3.jpg") no-repeat center top / cover;
+	background: url("../img/Warstwa 3.png") no-repeat center top / cover;
 	background-color: #1D1D1D;
 }
 .brown-line{
@@ -123,10 +123,11 @@ header{
 }
 #about-hiden-text{
 	display: none;
+	transition: 1s !important;
 }
-/*.active-text{
+.active-text{
 	display: inline !important;
-}*/
+}
 .active-text-photo{
 	transition: 1s !important;
 	margin-top: 10%;
@@ -179,7 +180,6 @@ header{
 	width: 100%;
 }
 .gallery-row-1{
-	display: flex;
 	margin-bottom: 30px;
 }
 .gallery-row-1 :first-child img{
@@ -199,11 +199,17 @@ header{
 #GALLERY{
 	padding: 20% 0 20% 0;
 }
-#hidden-rows{
+.gallery-hidden-row-1,
+.gallery-hidden-row-2{
 	display: none;
+	opacity: 0;
 }
 .show-more-btn{
 	margin-top: 100px;
+}
+.active-row{
+	display: flex !important;
+	opacity: 1;
 }
 /*///////////////////////////////////////////////////*/
 #CONTACT{
@@ -216,7 +222,7 @@ header{
 	margin-left: 65px;
 	margin-right: -65px;
 	background-color:  var(--accent);
-	background: url(../img/pexels-photo-955081.png) no-repeat center top / cover;
+	background: url(../img/pexels-photo-955081.jpeg) no-repeat center top / cover;
 	margin-bottom: -80px;
 	margin-top: -80px;
 }

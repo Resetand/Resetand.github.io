@@ -1,0 +1,271 @@
+@charset "UTF-8";
+* {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif
+}
+
+
+.station-details_body{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.underground{
+	background-color: #3b00a2;
+	color: #fff;
+	padding: 1px 10px;
+	font-size: 12px;
+	font-weight: 500;
+	box-shadow: 0 0 5px rgba(180, 11, 11, .6);
+}
+.close-detail:hover{
+    transform: scale(1.2,1.2);
+	color: #000000;
+    text-decoration: none;
+}
+.delails-buttons{
+	margin-top: 20px !important;
+	display: flex;
+	justify-content: space-around;
+	margin-top: auto;
+}
+.close-detail{
+    outline: none;
+    font-size: 16px;
+    transition: .2s;
+    padding: 0 10px;
+    float: right;
+    color: #303030;
+    text-decoration: none;
+}
+.detail_title{
+    font-size: 20px;
+    float: left;
+    margin-right: 20px;
+}
+.detail_line{
+    margin-left: 5px;
+    font-size: 13px;
+    float: right;
+    color: #fff;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+.station-detail_top{
+    height: 70px;
+}
+.auth-message{
+	display: none;
+}
+.station-detail_header{
+	min-height: 45px
+}
+/* .modal-body{
+	background: url('../img/general/detail-bg.jpg') no-repeat center center / cover;
+} */
+.station-details{
+	display: none;
+    min-width: 400px;
+    box-shadow: 0 0 50px rgba(22, 24, 139,.2);
+    position: fixed;
+    top: 150px;
+    left: 20px;
+    z-index: 100;
+}
+.login-bar .badge{
+	cursor: pointer;
+    font-size: 13.3px;
+    margin-right: 10px;
+    font-weight: 400;
+}
+
+.page-header {
+	position: fixed;
+	z-index: 10;
+	left: 0;
+	right: 0;
+	top: 0
+}
+
+
+.logout:hover{
+	color: #ffffff !important;
+}
+.user-welcome{
+	color: #cec4c5 !important;
+	display: flex;
+	align-items: center !important;
+	justify-content: center;
+	vertical-align: middle;
+}
+
+.visit_station{
+	opacity: 1 !important;
+	stroke-width: 15px !important;
+	stroke-dasharray: 27px !important;
+}
+.user-first-name{
+	color: #fff;
+}
+.right-side{
+	display: flex;
+}
+.logout{
+	margin-left: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none !important;
+	cursor: pointer;
+	transition: .2s;
+	background: unset;
+	border: unset;	
+	color: #cec4c5 !important;
+	font-size: 20px;
+}
+.logout span{
+	margin-right: 5px;
+	font-size: 14px;
+}
+.header-nav {
+	background-color: #303030;
+	padding: 5px 20px;
+	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center
+}
+
+.map {
+	position: relative;
+	background: url(../img/general/MAP.jpg) no-repeat top left/cover;
+	width: 95%;
+	margin: 40px 0 0 auto
+}
+.station {
+    fill-opacity: .1;
+	position: absolute;
+	top: 0;
+	stroke-width: 5px;
+	stroke-opacity: 100;
+	stroke-opacity: 1;
+	left: 0;
+	cursor: pointer;
+	opacity: .06;
+	-webkit-transition: .2s;
+	-o-transition: .2s;
+	transition: .2s
+}
+
+.station:hover {
+	opacity: 1
+}
+.fa-check-circle_style{
+	color: rgb(121, 211, 17);
+}
+.user-station-title{
+	color: rgb(75, 70, 70);
+}
+.left-side .fas{
+	padding: 10px;
+	font-size: 30px;
+	color: #cec4c5;
+}
+.header-nav__item{
+	display: flex;
+	align-items: center;
+	margin-left: 15px;
+}
+.summa{
+	color: rgb(70, 65, 65);
+	font-size: 13.5px;
+}
+.dropdown-item:hover{
+	background-color: unset;
+	box-shadow: unset;
+
+}
+.header-nav__item > a{
+	text-decoration: none;
+	color: #cec4c5 ;
+	font-size: 15px;
+	display: block;
+	padding: 5px 20px;
+	border-radius: 10px;
+}
+.header-nav__item_check{
+	display: flex;
+	padding: 5px 10px;
+}
+.header-nav__item_check a:hover, .header-nav__item a:hover{
+	box-shadow: 0 0 10px rgba(111, 103, 211, 0.5) 
+}
+.header-nav__item_check a{
+	display: block;
+	padding: 5px 20px;
+	border-radius: 10px;
+	background: #444242;
+}
+.marker{
+	fill: #eeff00;
+	trasnition: .2s;
+}
+.backlightClick .marker{
+	fill: #303030 !important
+}
+.header-nav__item_check svg{
+	width: 17px;
+	height: 17px;
+}
+.form-check{
+	display: flex;
+	align-content: center;
+	color: #cec4c5;
+}
+.left-side{
+	display: flex;
+	align-content: center;
+}
+.v-multi {
+	fill-opacity: .12;
+	stroke-width: 8px
+}
+
+.badge{
+	border-radius: 10px;
+	padding: 8px 20px !important;
+	border: unset !important;
+	transition: .2s;
+}
+.badge:hover{
+	box-shadow: 0 0 10px rgba(111, 103, 211, 0.5) !important;
+	background-color: unset;
+}
+
+.form-control{
+	margin-bottom: 20px;
+}
+.log-out{
+	font-weight: normal;
+	font-size: 13px;
+	padding: 7px 14px !important;
+	margin-left: 20px;
+}
+@media (min-width:1920px) {
+	.map {
+		width: 1900px
+	}
+}
+

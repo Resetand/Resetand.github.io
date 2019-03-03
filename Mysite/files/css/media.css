@@ -1,0 +1,120 @@
+/*Медиазапросы*/
+@media (min-width: 1200px){
+    #s-header{
+        height: 100vh;
+        min-height: 600px;
+    }
+    
+}
+@media (max-width: 991.98px) { 
+    .about-main p{
+        max-width: unset;
+        font-size: 16px;
+    }
+    .myIcon{
+        width: 100%;
+    }
+    #web{
+        display: none;
+    }
+}
+@media (max-width: 767.98px){
+    .about-inf-title{
+        text-align: center;
+        margin-bottom: 20px;
+
+    }
+    .myIcon{
+        margin-top: 50%;
+        width: 100%;
+        border-radius: 10%;
+    }
+    .about-inf, 
+    .about-contact{
+        padding: 0;
+    }
+    .about-inf-title__photo{
+        display: none;
+    }
+    .arrow{
+        display: none;
+    }
+   
+}
+@media (max-width: 575.98px){
+    .work-card{
+        margin: 5px 0;
+    }
+    #s-about .button-main{
+        white-space: nowrap;
+        width: 100%;
+    }
+    .title-name{
+        width: 90%;
+        padding: 10px 10px;
+        font-size: 25px;
+    }
+    .hiddenMenu-contact{
+        display: block;
+    }
+    .hiddenMenu-wrap{
+        margin-top: 0;
+    }
+    .burger-box{
+        position: absolute;
+    }
+    #s-header{
+        height: 450px;
+        min-height: unset;
+    }
+    .header-composition{
+        text-align: center;
+    }
+    .header-hello{
+        font-size: 45px;
+        margin-bottom: 30px;
+    }
+    .header-desc{
+        font-size: 17px;
+    }
+    .big-title{
+        font-size: 35px;
+    }
+    .sub-title{
+        font-size: 14px;
+    }
+    
+    .about-inf, 
+    .about-contact{
+        padding: 0 20px;
+    }
+    .hiddenMenu-contact-item{
+        display: inline-block;
+    }
+    .hiddenMenu-contact-phone{
+        margin-left: 10px;
+    }
+    .text{
+        font-size: 10px !important;
+    }
+    .work-card-1{
+        background: url(/img/site-1.png) no-repeat center center / cover;
+        -webkit-animation-delay: 0s;
+                animation-delay: 0s;
+    }
+    .work-card-2 {
+        background: url(/img/site-2.png) no-repeat center center / cover;
+        -webkit-animation-delay: 0s;
+                animation-delay: 0s;
+    }
+    .work-card-3{
+        background: url(/img/site-1.png) no-repeat center center / cover;
+        -webkit-animation-delay: 0s;
+                animation-delay: 0s;
+    }
+    .work-card-4 {
+        background: url(/img/site-2.png) no-repeat center center / cover;
+        -webkit-animation-delay: 0s;
+                animation-delay: 0s;
+    }
+}

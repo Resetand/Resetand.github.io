@@ -1,0 +1,124 @@
+{% load static %}<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Места и метро</title>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+		<link rel="stylesheet" href="{% static 'metro_map/css/libs.css' %}" /> 
+		<link rel="stylesheet" href="{% static 'metro_map/css/main.css' %}" /> 
+	</head>
+
+
+	<body>
+			<div class="modal fade" id="signin" tabindex="-1" role="dialog" aria-labelledby="signinlLabel" aria-hidden="true">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="signinlLabel">Зарегистрироваться</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+									<form action="{% url 'signin_action' %}" method="post">
+										{% csrf_token %}
+										{{ formsignin }}
+										<div class="text-center"><button type="submit" class="btn btn-dark mt-2">Зарегистрироваться</button></div>
+									</form>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="exampleModalLabel">Войти</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+										<div class="alert alert-danger auth-message login-message" role="alert">
+										</div>
+										<form id="login_form" action="{% url 'login_action' %}" method="post">
+											{% csrf_token %}
+											{{ formlogin }}
+											<div class="text-center"><button type="submit" class="btn btn-dark mt-2">Войти</button></div>
+										</form>
+								</div>
+							</div>
+						</div>
+					</div>
+
+		<header class="page-header" id="header">
+			<nav class="header-nav">
+				<div class="left-side">
+						<a style='display: flex; align-items: center; justify-content: center' href="{% url 'index' %}"><i class="fas fa-subway"></i> 
+							{% if user.is_authenticated == False %}
+							<span class="underground">UNDERGROUND</span>
+							{%endif%}
+						</a>
+						{% if user.is_authenticated %}
+						{% block left-options %}
+							<div class="header-nav__item header-nav__item_check"><a href="#" id='backlight' >Подцветка 
+									<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="highlighter" class="svg-inline--fa fa-highlighter fa-w-17" role="img" viewBox="0 0 544 512">
+									<path class="marker" fill="#fff" d="M0 479.98L99.92 512l35.45-35.45-67.04-67.04L0 479.98zm124.61-240.01a36.592 36.592 0 0 0-10.79 38.1l13.05 42.83-50.93 50.94 96.23 96.23 50.86-50.86 42.74 13.08c13.73 4.2 28.65-.01 38.15-10.78l35.55-41.64-173.34-173.34-41.52 35.44zm403.31-160.7l-63.2-63.2c-20.49-20.49-53.38-21.52-75.12-2.35L190.55 183.68l169.77 169.78L530.27 154.4c19.18-21.74 18.15-54.63-2.35-75.13z"/>
+									</svg>
+									</a>
+								</div>
+							<div class="header-nav__item">
+									<a class=" dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											Показать список
+										</a>										
+											<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+										{% for mystation in userStations %}
+												<span class="dropdown-item" >{{ mystation.station.title }}</span>
+										{% endfor %}
+										<span class="dropdown-item summa text-center" > {{ userStations.count }} / {{ stations.count }}</span>
+
+									</div>
+							</div>
+							
+						{% endblock left-options %}
+						{% endif %}
+				</div>
+				<div class="right-side">
+					{% if user.is_authenticated %}
+					<div class="user-welcome"><span>Шалом, <span class="user-first-name">{{user.username|title}}</span></span>
+						<a href="{% url 'logout_action' %}" class="badge badge badge-dark log-out"><span>Выйти</span> <i class="fas fa-sign-out-alt"></i></a>
+						{% if user.is_superuser %}
+						<a href="/admin/" class="badge badge badge-danger log-out"><span>Админка</span> <i class="fas fa-sign-out-alt"></i></a>
+						{% endif %}
+					</div>
+					{% else %}
+					<div class="login-bar">
+							<button data-toggle="modal" data-target="#login" class="badge badge badge-success login">Войти <i class="fas fa-sign-in-alt"></i></button>
+							<button data-toggle="modal" data-target="#signin" class="badge badge badge-dark signin">Регистрация <i class="fas fa-user-plus"></i></button>
+					</div>
+						
+					{% endif %}
+				</div>
+			</nav>
+		</header>
+
+    {% block content %}
+      
+		{% endblock content %}
+		<script src="{% static 'metro_map/js/libs.js' %}"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+		{% block scriptblock %}
+			
+		{% endblock scriptblock %}
+		<script src="{% static 'metro_map/js/main.js' %}"></script>
+		
+		
+				
+	</body>
+</html>
+
+

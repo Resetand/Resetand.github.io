@@ -111,9 +111,6 @@
     .hidden-mnu .h-logo{
         display: none;
     }
-    .a-items{
-        margin-top: 150px !important;
-    }
     .hidden-mnu > nav >ul{
         height: 100%;
         display: flex;

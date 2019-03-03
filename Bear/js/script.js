@@ -1,27 +1,26 @@
 jQuery(document).ready(function($) {
 	$("#button1").on('click', function(event) {
 		event.preventDefault();
-		$("#about-hiden-text").slideToggle();
-		
+		$("#about-hiden-text").toggleClass('active-text');
+		$(".about-photo").toggleClass('active-text-photo');
 	});
 	$("#bt-more-1").on('click', function(event) {
 		event.preventDefault();
-		$("#bt-more-1").fadeOut(0);
-		$("#hiden-text-1").fadeIn(1000);
+		$("#hiden-text-1").toggleClass('active-text');
 	});
 	$("#bt-more-2").on('click', function(event) {
 		event.preventDefault();
-		$("#bt-more-2").fadeOut(0);
-		$("#hiden-text-2").fadeIn(1000);
+		$("#hiden-text-2").toggleClass('active-text');
 	});
 	$("#bt-more-3").on('click', function(event) {
 		event.preventDefault();
-		$("#bt-more-3").fadeOut(0);
-		$("#hiden-text-3").fadeIn(1000);
+		$("#hiden-text-3").toggleClass('active-text');
 	});
 	$("#show-btn").on("click", function(event) {
 		event.preventDefault();
-		$("#hidden-rows").slideToggle(1800);
-		
+		var row1 = ".gallery-hidden-row-1";
+		var row2 = ".gallery-hidden-row-2";
+		$(row1).toggleClass("active-row");
+		$(row2).toggleClass("active-row");
 	});
 });

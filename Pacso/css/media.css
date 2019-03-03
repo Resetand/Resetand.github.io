@@ -1,0 +1,63 @@
+/*Медиазапросы*/
+
+/* LIBS*/
+
+/* ______________________________________ */ 
+
+
+
+/*Small devices (landscape phones, 576px and up*/
+@media (min-width: 576px) { 
+
+ }
+/* ______________________________________ */ 
+
+/* Medium devices (tablets, 768px and up)*/
+@media (max-width: 768px) { 
+    
+    #sort{
+        display: none;
+    }
+    .article{
+        padding-top: 40px;
+        display: grid;	
+        grid-template-areas:
+        "post-big post-big"
+        "post_wide--1"
+        "post_wide--2"
+        "post_wide--3"
+        "small-post--1"
+        "small-post--2"
+        "small-post--3"
+        "simple-posts"
+        "sideBar";
+        /* grid-template-rows:  2fr .5fr .5fr .5fr 1fr 1fr; */
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+    }
+ }
+/* ______________________________________ */ 
+
+/* Large devices (desktops, 992px and up)*/
+@media (max-width: 992px) { 
+	.article-sideBar{
+        display: none;
+    }
+ }
+/* ______________________________________ */ 
+@media (max-width: 1200px) { 
+    .menu-option{
+        display: none;
+    }
+    .hum-menu{     /*TEMP TEMP TEMP*/
+        margin-left: 15px;
+        display: block;
+        font-size: 1.5em;
+        margin-top: 4px;
+    }
+ }
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) { 
+
+ }
