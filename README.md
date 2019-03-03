@@ -1,5 +1,6 @@
 # My sites
-Super mega developer i am. So here my sites
+layout by Machekhin Kirill
+
 + [Bear](Resetand.github.io/Bear/)
 + [Nav bar](Resetand.github.io/Fixed-menu/)
 + [Rabbit](Resetand.github.io/Rabbit/)
