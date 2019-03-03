@@ -1,23 +1,14 @@
 # My sites
 Super mega developer i am. So here my sites
 + [Bear](Resetand.github.io/Bear/)
-
-    Верстка одностраничного сайта
 + [Nav bar](Resetand.github.io/Fixed-menu/)
-
-    Навбар фикс
-+ [Navigation menu](Resetand.github.io/Navigation-menu/)
-
-    Просто меню навигации
 + [Rabbit](Resetand.github.io/Rabbit/)
++ [Creatives](Resetand.github.io/Creatives/)
++ [Pomodoro timer](Resetand.github.io/Pomodoro/)
++ [Pacso](Resetand.github.io/Pacso/)
++ [FDN](Resetand.github.io/FDN/)
++ [Waxom](Resetand.github.io/Waxom/)
+    
 
-    Верстка одностраничного сайта
-    
-    
-    Просто меню навигации
-+ [Creatives](Resetand.github.io/Creatives//)
-
-    Пока что лучшее из того, что я делал, но не идеал
-    
     
 
