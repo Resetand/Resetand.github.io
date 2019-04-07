@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -5,28 +6,55 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<title>Кафедра ИиИТ</title>
+		<style>
+		.preloader{
+		background-color: rgb(255, 255, 255);
+		z-index: 10000;
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		}
+		.preloader__icon{
+			animation: 1s linear 0s normal none infinite running rot;
+			z-index: 10001;
+			position: absolute;
+			top: 44%;
+			left: 50%;
+			transform: translate(-50%);
+			width: 100px;
+			height: 100px;
+			background: url("../img/svg/logosmall-black.svg") no-repeat center / 73px;
+		}
+		@keyframes rot {
+			0% {
+				transform: rotate(0deg);
+			}
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+		</style>
+		<link rel="icon" href="./img/general/logosmall-black.ico" type="image/x-icon">
 		<link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700|Lato:400,700&amp;subset=cyrillic" rel="stylesheet">
-		
 		<link rel="stylesheet" href="./css/libs.css" />
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<link rel="stylesheet" href="./css/main.css" />
 	</head>
-	<div id="ex1" class="modal">
-			<p>Thanks for clicking. That felt good.</p>
-			<a href="#" rel="modal:close">Close</a>
-		</div>
+	
 	<body>
 		
-		
 		<div class="overlay_menu"></div>
-		<header class="s-header_empl s-header" id="headerEmpl">
+		<header class="s-header" id="header">
 			<nav class="hidden-mnu">
 			<ul>
-				<li class="mnu-item_hid"><a href="index.html">О Кафедре</a></li>
+				<li class="mnu-item_hid "><a href="index.html">О Кафедре</a></li>
 				<li class="mnu-item_hid mnu-item_hid_active"><a href="empl.html">Сотрудники</a></li>
-				<li class="mnu-item_hid"><a href="#">Студенту</a></li>
-				<li class="mnu-item_hid"><a href="#">Аспиранту</a></li>
-				<li class="mnu-item_hid"><a href="#">Абитуриенту</a></li>
-				<li class="mnu-item_hid"><a href="#">Новости</a></li>
+				<li class="mnu-item_hid "><a href="stud.html">Студенту</a></li>
+				<li class="mnu-item_hid "><a href="#">Аспиранту</a></li>
+				<li class="mnu-item_hid "><a href="#">Абитуриенту</a></li>
+				<li class="mnu-item_hid "><a href="#">Новости</a></li>
 			</ul>
 		</nav>
 			<div class="container">
@@ -36,24 +64,105 @@
 						<ul>
 							<li class="mnu-item "><a href="index.html">О Кафедре</a></li>
 							<li class="mnu-item mnu-item_active"><a href="empl.html">Сотрудники</a></li>
-							<li class="mnu-item "><a href="#">Студенту</a></li>
+							<li class="mnu-item "><a href="stud.html">Студенту</a></li>
 							<li class="mnu-item "><a href="#">Аспиранту</a></li>
 							<li class="mnu-item "><a href="#">Абитуриенту</a></li>
 							<li class="mnu-item "><a href="#">Новости</a></li>
 						</ul>
 					</nav>
-					<button class="mnu-burger">
-						
-					</button>
+					<button class="mnu-burger"><span></span></button>
 					
 				</div>
 				<hr class="header-top__line">
 				<div class="header-accent">
-					<h1 class="h1">Наши преподаватели</h1>
+					<h1 class="h1">Информатика и информационные технологии</h1>
 					<h4 class="h4">Познакомтесь с нашей кафедрой</h4>
 				</div>
 			</div>
 		</header>
+		
+		<div class="modal bd-example-modal-xl fade" id="emplModal" tabindex="-1" role="dialog" aria-labelledby="emplModalLabel" aria-hidden="true">
+
+					<div class="modal-dialog modal-xl" role="document">
+							<div class="modal-content">
+									<button type="button" class="close_modal" data-dismiss="modal" aria-label="Close">
+											<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 51.976 51.976" style="enable-background:new 0 0 51.976 51.976;" xml:space="preserve">
+												<g>
+													<path d="M44.373,7.603c-10.137-10.137-26.632-10.138-36.77,0c-10.138,10.138-10.137,26.632,0,36.77s26.632,10.138,36.77,0   C54.51,34.235,54.51,17.74,44.373,7.603z M36.241,36.241c-0.781,0.781-2.047,0.781-2.828,0l-7.425-7.425l-7.778,7.778   c-0.781,0.781-2.047,0.781-2.828,0c-0.781-0.781-0.781-2.047,0-2.828l7.778-7.778l-7.425-7.425c-0.781-0.781-0.781-2.048,0-2.828   c0.781-0.781,2.047-0.781,2.828,0l7.425,7.425l7.071-7.071c0.781-0.781,2.047-0.781,2.828,0c0.781,0.781,0.781,2.047,0,2.828   l-7.071,7.071l7.425,7.425C37.022,34.194,37.022,35.46,36.241,36.241z"/>
+												</g>
+										</button>
+								<div class="modal-body">
+										<div class="container ">
+												<div class="empl-info">
+													<div class="empl-photo" style="background: url('./img/content/temp/empl-ex.jpg') no-repeat center / cover;"> </div>
+													<h3 class="empl-info__title h3 text-center mb-4">Попов Дмитрий Иванович</h3>
+													<p class="dropText txt txt_xs">Попов  Дмитрий Иванович, доктор технических наук, профессор, заведующий кафедрой «Информатика и информационные технологии», директор Института открытого образования Московского государственного университета печати имени Ивана Федорова, член-корреспондент Российской академии естествознания, Член Нью-Йоркской Академии Наук (1999г.) и Ассоциации дистанционного обучения США (USDLA - United States Distance Learning Association).
+															
+															Область научных интересов - интеллектуальные системы дистанционного образования и тестирования, автоматизация и управление процессами аттестации персонала предприятий и учащихся учебных заведений, Интернет-технологии, математическое и программное обеспечение ЭВМ и сетей.
+					
+															Попов Д.И. в 1988 году с золотой медалью окончил среднюю общеобразовательную школу №8 им.А.Г.Ломакина г.Таганрога. В 1993 году с отличием закончил Факультет автоматики и вычислительной техники Таганрогского радиотехнического института по специальности "Программное обеспечение вычислительной техники и автоматизированных систем". В 1993-2003 годах работал программистом, ассистентом, доцентом кафедры "Математического обеспечения и применения ЭВМ" Таганрогского государственного радиотехнического университета (ТРТУ). Область научных исследований и диссертационной работы в те годы была связана с разработкой и исследованием методов высокоуровневого синтеза цифровых устройств в системах сквозного автоматизированного проектирования СБИС. По тематике научных исследований "Разработка методов высокоуровневого синтеза цифровых схем и технологии использования программного обеспечения в САПР СБИС" в 1996 году проходил стажировку в Мичиганском государственном университете (США). В 1999 году на основе выигранного конкурсного гранта проводил исследования и разработку систем автоматизации и управления процессов дистанционного обучения в университете штата Орегон (США).
+															
+															С 2000 года - заведующий отделом "Интеллектуальных систем в дистанционном образовании" Центра дистанционного образования ТРТУ, руководитель и ответственный исполнитель научно-исследовательских работ Министерства образования РФ по программам "Развития открытого образования". Научно-технические разработки, сделанные в отделе под руководством Попова Д.И., позволили ТРТУ осуществить в 2001 году первый прием учащихся с применением дистанционных образовательных технологий и организовать их образовательный процесс.
+															
+															В 2003 году был переведен на должность директора Центра дистанционного образования и доцента кафедры Информационных технологий Московского государственного университета печати (МГУП). Докторская диссертация посвящена решению проблем комплексной автоматизации процессов аттестации персонала промышленных предприятий. С 2003 года член аттестационных комиссий по комплексной оценке, аттестации и аккредитации вузов РФ, ведущий лектор учебных курсов Министерства образования и науки РФ по повышению квалификации профессорско-преподавательского состава вузов. С 2008 года – директор Института открытого образования, профессор и заведующий кафедрой "Информатика" МГУП, которая в последствии была преобразована в кафедру «Информатика и информационные технологии».
+															
+															Под руководством Попова Д.И. в МГУП имени Ивана Федорова в 2003 году впервые осуществлен набор учащихся на заочную форму обучения с применением дистанционных образовательных технологий, в 2007 году впервые была организована работа Интернет-студии, в которой были записаны боле 400 часов видеолекций, отработана технология проведения учебных вебинаров, организована работа по реализации электронных изданий и электронных учебно-методических комплексов для поддержки дистанционного обучения, внедрена система Интернет-тестирования учащихся МГУП имени Ивана Федорова, разработаны сотни банков тестовых заданий для оценки знаний учащихся по 5 направлениям обучения.
+															В разное время читал курсы:
+															
+															Попов Д.И. является автором более чем 150 научных и учебно-методических работ, в том числе монографий, авторских свидетельств и учебных пособий. Основатель научной школы в МГУП имени Ивана Федорова «Методология и технология создания интеллектуальных автоматизированных систем, основанных на представлении, обработке и оценке знаний в редакционно-издательских комплексах, издательском деле, принтмедиа и медиаиндустрии», в рамках которой под руководством Попова Д.И. получили звания кандидатов наук 4 аспиранта, защитили магистерские диссертации 3 выпускника. В настоящее время руководит научной работой пяти аспирантов и трех магистров.</p>
+													<button class='showMore light-but'>Подробнее...</button>
+												</div>
+												<div class="row mt-5">
+													<div class="col-6 text-center col-sm-6 col-md-4">
+														<div class="eml-skill">
+															<div class="eml-skill__icon eml-skill__icon_time"></div>
+															<div class="eml-skill__info">
+																<span class="eml-skill__info_num">13</span>
+																 лет стаж преподавания
+															</div>
+														</div>
+													</div>
+													
+													<div class="col-6 text-center col-sm-6 col-md-4">
+														<div class="eml-skill">
+															<div class="eml-skill__icon eml-skill__icon_index"></div>
+															<div class="eml-skill__info">
+																<span class="eml-skill__info_num">4.5</span> - индекс
+																Хирша*
+															</div>
+														</div>
+													</div>
+													
+													<div class="col-6 text-center col-sm-6 col-md-4 mx-auto">
+														<div class="eml-skill">
+															<div class="eml-skill__icon eml-skill__icon_works"></div>
+															<div class="eml-skill__info">
+																<span class="eml-skill__info_num">113</span> - кол-во научных работ 
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="empl-diplomsthems">
+													<h4 class="h4 h4_black mt-5 mb-4">Тематика выпускных квалификационных работ</h4>
+													<p class="txt">Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей.</p>
+													<ul class='empl-diplomsthems__list mt-4'>
+														<li>Анализ результатов тестирования</li>
+														<li>Cетевым технологии и оформление и дизайну электронных изданий</li>
+														<li>Приложение к разработке и управлению базами данных</li>
+													</ul>
+												</div>
+										</div>
+										
+								</div>
+								<div class="modal-footer">
+									
+								</div>
+							</div>
+						</div>
+								
+					</div>
+		
+	
 
 		<main class="content" id="mainEmpl" role="main">
 				<section class="s-description">
@@ -75,7 +184,7 @@
 							<div class="empl-cards">
 								<div class="row">
 									<div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-										<a href="#ex1" rel="modal:open"  class="empl-card">
+										<a href="#" data-toggle="modal" data-target="#emplModal"  class="empl-card">
 											<div class="empl-card__name">Попов <br> Дмитрий Иванович</div>
 											<div class="empl-card__position">Профессор, зав. кафедрой</div>
 											<div class="empl-card__link-icon">
@@ -85,7 +194,7 @@
 									</div>
 
 									<div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-										<a href="#" class="empl-card">
+										<a ref="#" data-toggle="modal" data-target="#emplModal"  class="empl-card">
 											<div class="empl-card__name">Булатников <br> Евгений Владиславович</div>
 											<div class="empl-card__position">Доцент</div>
 											<div class="empl-card__link-icon">
@@ -95,7 +204,7 @@
 									</div>
 
 									<div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-										<a href="#" class="empl-card">
+										<a ref="#" data-toggle="modal" data-target="#emplModal"  class="empl-card">
 											<div class="empl-card__name">Белоусов  <br> Игорь Рафаилович</div>
 											<div class="empl-card__position">Профессор</div>
 											<div class="empl-card__link-icon">
@@ -105,7 +214,7 @@
 									</div>
 
 									<div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-										<a href="#" class="empl-card">
+										<a ref="#" data-toggle="modal" data-target="#emplModal"  class="empl-card">
 											<div class="empl-card__name">Денисов   <br> Дмитрий Александрович</div>
 											<div class="empl-card__position">Доцент</div>
 											<div class="empl-card__link-icon">
@@ -115,7 +224,7 @@
 									</div>
 
 									<div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-										<a href="#" class="empl-card">
+										<a ref="#" data-toggle="modal" data-target="#emplModal"  class="empl-card">
 											<div class="empl-card__name">Мосалев    <br> Павел Михайлович</div>
 											<div class="empl-card__position">Ассистент</div>
 											<div class="empl-card__link-icon">
@@ -125,7 +234,7 @@
 									</div>
 										
 									<div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-										<a href="#" class="empl-card">
+										<a ref="#" data-toggle="modal" data-target="#emplModal"  class="empl-card">
 											<div class="empl-card__name">Шурыгин <br> Владимир Николаевич </div>
 											<div class="empl-card__position">Профессор</div>
 											<div class="empl-card__link-icon">
@@ -135,7 +244,7 @@
 									</div>
 										
 									<div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-										<a href="#" class="empl-card">
+										<a ref="#" data-toggle="modal" data-target="#emplModal"  class="empl-card">
 											<div class="empl-card__name">Демидова  <br> Анна Михайловна </div>
 											<div class="empl-card__position">Ассистент </div>
 											<div class="empl-card__link-icon">
@@ -145,7 +254,7 @@
 									</div>
 										
 									<div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-										<a href="#" class="empl-card">
+										<a ref="#" data-toggle="modal" data-target="#emplModal"  class="empl-card">
 											<div class="empl-card__name">Иванова   <br> Анна Евгеньевна </div>
 											<div class="empl-card__position">Доцент </div>
 											<div class="empl-card__link-icon">
@@ -155,7 +264,7 @@
 									</div>
 										
 									<div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-										<a href="#" class="empl-card">
+										<a ref="#" data-toggle="modal" data-target="#emplModal"  class="empl-card">
 											<div class="empl-card__name">Овечкис   <br> Юрий Натанович </div>
 											<div class="empl-card__position">Профессор </div>
 											<div class="empl-card__link-icon">
@@ -165,7 +274,7 @@
 									</div>
 
 									<div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-										<a href="#" class="empl-card">
+										<a ref="#" data-toggle="modal" data-target="#emplModal"  class="empl-card">
 											<div class="empl-card__name">Попова <br> Елена Дмитриевна </div>
 											<div class="empl-card__position">Доцент </div>
 											<div class="empl-card__link-icon">
@@ -175,7 +284,7 @@
 									</div>
 
 									<div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-										<a href="#" class="empl-card">
+										<a ref="#" data-toggle="modal" data-target="#emplModal"  class="empl-card">
 											<div class="empl-card__name">Смирнова  <br> Галина Константиновна </div>
 											<div class="empl-card__position">Доцент </div>
 											<div class="empl-card__link-icon">
@@ -185,7 +294,7 @@
 									</div>
 
 									<div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-										<a href="#" class="empl-card">
+										<a ref="#" data-toggle="modal" data-target="#emplModal"  class="empl-card">
 											<div class="empl-card__name">Чурбанов <br> Валерий Вадимович </div>
 											<div class="empl-card__position">Доцент </div>
 											<div class="empl-card__link-icon">
@@ -194,7 +303,7 @@
 										</a>
 									</div>
 									<div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-										<a href="#" class="empl-card">
+										<a ref="#" data-toggle="modal" data-target="#emplModal"  class="empl-card">
 											<div class="empl-card__name">Попов <br> Дмитрий Иванович</div>
 											<div class="empl-card__position">Профессор, зав. кафедрой</div>
 											<div class="empl-card__link-icon">
@@ -204,7 +313,7 @@
 									</div>
 
 									<div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-										<a href="#" class="empl-card">
+										<a ref="#" data-toggle="modal" data-target="#emplModal"  class="empl-card">
 											<div class="empl-card__name">Булатников <br> Евгений Владиславович</div>
 											<div class="empl-card__position">Доцент</div>
 											<div class="empl-card__link-icon">
@@ -214,7 +323,7 @@
 									</div>
 
 									<div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-										<a href="#" class="empl-card">
+										<a ref="#" data-toggle="modal" data-target="#emplModal"  class="empl-card">
 											<div class="empl-card__name">Белоусов  <br> Игорь Рафаилович</div>
 											<div class="empl-card__position">Профессор</div>
 											<div class="empl-card__link-icon">
@@ -224,7 +333,7 @@
 									</div>
 
 									<div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-										<a href="#" class="empl-card">
+										<a ref="#" data-toggle="modal" data-target="#emplModal"  class="empl-card">
 											<div class="empl-card__name">Денисов   <br> Дмитрий Александрович</div>
 											<div class="empl-card__position">Доцент</div>
 											<div class="empl-card__link-icon">
@@ -234,7 +343,7 @@
 									</div>
 
 									<div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-										<a href="#" class="empl-card">
+										<a ref="#" data-toggle="modal" data-target="#emplModal"  class="empl-card">
 											<div class="empl-card__name">Мосалев    <br> Павел Михайлович</div>
 											<div class="empl-card__position">Ассистент</div>
 											<div class="empl-card__link-icon">
@@ -244,7 +353,7 @@
 									</div>
 										
 									<div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-										<a href="#" class="empl-card">
+										<a ref="#" data-toggle="modal" data-target="#emplModal"  class="empl-card">
 											<div class="empl-card__name">Шурыгин <br> Владимир Николаевич </div>
 											<div class="empl-card__position">Профессор</div>
 											<div class="empl-card__link-icon">
@@ -254,7 +363,7 @@
 									</div>
 										
 									<div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-										<a href="#" class="empl-card">
+										<a ref="#" data-toggle="modal" data-target="#emplModal"  class="empl-card">
 											<div class="empl-card__name">Демидова  <br> Анна Михайловна </div>
 											<div class="empl-card__position">Ассистент </div>
 											<div class="empl-card__link-icon">
@@ -264,7 +373,7 @@
 									</div>
 										
 									<div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-										<a href="#" class="empl-card">
+										<a ref="#" data-toggle="modal" data-target="#emplModal"  class="empl-card">
 											<div class="empl-card__name">Иванова   <br> Анна Евгеньевна </div>
 											<div class="empl-card__position">Доцент </div>
 											<div class="empl-card__link-icon">
@@ -274,7 +383,7 @@
 									</div>
 										
 									<div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-										<a href="#" class="empl-card">
+										<a ref="#" data-toggle="modal" data-target="#emplModal"  class="empl-card">
 											<div class="empl-card__name">Овечкис   <br> Юрий Натанович </div>
 											<div class="empl-card__position">Профессор </div>
 											<div class="empl-card__link-icon">
@@ -284,7 +393,7 @@
 									</div>
 
 									<div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-										<a href="#" class="empl-card">
+										<a ref="#" data-toggle="modal" data-target="#emplModal"  class="empl-card">
 											<div class="empl-card__name">Попова <br> Елена Дмитриевна </div>
 											<div class="empl-card__position">Доцент </div>
 											<div class="empl-card__link-icon">
@@ -294,7 +403,7 @@
 									</div>
 
 									<div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-										<a href="#" class="empl-card">
+										<a ref="#" data-toggle="modal" data-target="#emplModal"  class="empl-card">
 											<div class="empl-card__name">Смирнова  <br> Галина Константиновна </div>
 											<div class="empl-card__position">Доцент </div>
 											<div class="empl-card__link-icon">
@@ -351,8 +460,26 @@
 				</div>
 			</div>
 		</footer>
-
+		<div class="preloader" id="preloader"><span class="preloader__icon"></span></div>
+		<script>
+					window.onload = function() {
+					var fadeTarget = document.getElementById("preloader");
+					fadeTarget.style.display = "none";
+					// var fadeEffect = setInterval(function () {
+					// 		if (!fadeTarget.style.opacity) {
+					// 				fadeTarget.style.opacity = 1;
+					// 		}
+					// 		if (fadeTarget.style.opacity > 0) {
+					// 				fadeTarget.style.opacity -= 0.1;
+					// 		} else {
+					// 				fadeTarget.style.display = "none";
+					// 				clearInterval(fadeEffect);
+					// 		}
+					// }, 10);
+				}
+			</script>
 		<script src="./js/libs.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 		<script src="./js/main.js"></script>
 	</body>
 	</html>

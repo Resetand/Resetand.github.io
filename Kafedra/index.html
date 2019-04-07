@@ -5,8 +5,38 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<title>Кафедра ИиИТ</title>
+		<style>
+		.preloader{
+		background-color: rgb(255, 255, 255);
+		z-index: 10000;
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		}
+		.preloader__icon{
+			animation: 1s linear 0s normal none infinite running rot;
+			z-index: 10001;
+			position: absolute;
+			top: 44%;
+			left: 50%;
+			transform: translate(-50%);
+			width: 100px;
+			height: 100px;
+			background: url("../img/svg/logosmall-black.svg") no-repeat center / 73px;
+		}
+		@keyframes rot {
+			0% {
+				transform: rotate(0deg);
+			}
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+		</style>
+		<link rel="icon" href="./img/general/logosmall-black.ico" type="image/x-icon">
 		<link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700|Lato:400,700&amp;subset=cyrillic" rel="stylesheet">
-
 		<link rel="stylesheet" href="./css/libs.css" />
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<link rel="stylesheet" href="./css/main.css" />
@@ -20,7 +50,7 @@
 			<ul>
 				<li class="mnu-item_hid mnu-item_hid_active"><a href="index.html">О Кафедре</a></li>
 				<li class="mnu-item_hid "><a href="empl.html">Сотрудники</a></li>
-				<li class="mnu-item_hid "><a href="#">Студенту</a></li>
+				<li class="mnu-item_hid "><a href="stud.html">Студенту</a></li>
 				<li class="mnu-item_hid "><a href="#">Аспиранту</a></li>
 				<li class="mnu-item_hid "><a href="#">Абитуриенту</a></li>
 				<li class="mnu-item_hid "><a href="#">Новости</a></li>
@@ -33,15 +63,13 @@
 						<ul>
 							<li class="mnu-item mnu-item_active"><a href="index.html">О Кафедре</a></li>
 							<li class="mnu-item "><a href="empl.html">Сотрудники</a></li>
-							<li class="mnu-item "><a href="#">Студенту</a></li>
+							<li class="mnu-item "><a href="stud.html">Студенту</a></li>
 							<li class="mnu-item "><a href="#">Аспиранту</a></li>
 							<li class="mnu-item "><a href="#">Абитуриенту</a></li>
 							<li class="mnu-item "><a href="#">Новости</a></li>
 						</ul>
 					</nav>
-					<button class="mnu-burger">
-						
-					</button>
+					<button class="mnu-burger"><span></span></button>
 					
 				</div>
 				<hr class="header-top__line">
@@ -91,7 +119,7 @@
 												<li class="list__item txt txt_xs">Методам проектирования и разработки компьютерных игр различных типов</li>
 											</ul>
 										</div>
-										<div class="col-12 col-md-6 col-xl-4">
+										<div class="col-12 col-md-4 col-xl-3">
 											<h6 class="h6">На кого учим?</h6>
 											<ul class="list">
 												<li class="list__item txt">Веб-инженер</li>
@@ -124,7 +152,7 @@
 												<li class="list__item txt txt_xs">Методам проектирования и разработки компьютерных игр различных типов</li>
 											</ul>
 										</div>
-										<div class="col-12 col-md-6 col-xl-4">
+										<div class="col-12 col-md-6 col-xl-3">
 											<h6 class="h6">На кого учим?</h6>
 											<ul class="list">
 												<li class="list__item txt">Веб-инженер</li>
@@ -157,7 +185,7 @@
 												<li class="list__item txt txt_xs">Методам проектирования и разработки компьютерных игр различных типов</li>
 											</ul>
 										</div>
-										<div class="col-12 col-md-6 col-xl-4">
+										<div class="col-12 col-md-6 col-xl-3">
 											<h6 class="h6">На кого учим?</h6>
 											<ul class="list">
 												<li class="list__item txt">Веб-инженер</li>
@@ -190,7 +218,7 @@
 												<li class="list__item txt txt_xs">Методам проектирования и разработки компьютерных игр различных типов</li>
 											</ul>
 										</div>
-										<div class="col-12 col-md-6 col-xl-4">
+										<div class="col-12 col-md-6 col-xl-3">
 											<h6 class="h6">На кого учим?</h6>
 											<ul class="list">
 												<li class="list__item txt">Веб-инженер</li>
@@ -223,7 +251,7 @@
 												<li class="list__item txt txt_xs">Методам проектирования и разработки компьютерных игр различных типов</li>
 											</ul>
 										</div>
-										<div class="col-12 col-md-6 col-xl-4">
+										<div class="col-12 col-md-6 col-xl-3">
 											<h6 class="h6">На кого учим?</h6>
 											<ul class="list">
 												<li class="list__item txt">Веб-инженер</li>
@@ -333,10 +361,9 @@
 			<div class="slick-slider slider">
 					<img class="clider-item" src="./img/content/slider_home/1.jpg" alt="slider image 1">
 					<img class="clider-item" src="./img/content/slider_home/2.jpg" alt="slider image 2">
-					<img class="clider-item" src="./img/content/temp/1.jpeg" alt="slider image 3">
-					<img class="clider-item" src="./img/content/temp/2.jpg" alt="slider image 4">
-					<img class="clider-item" src="./img/content/temp/3.jpeg" alt="slider image 5">
-					<img class="clider-item" src="./img/content/temp/4.jpg" alt="slider image 6">
+					<img class="clider-item" src="./img/content/slider_home/1.jpg" alt="slider image 3">
+					<img class="clider-item" src="./img/content/slider_home/1.jpg" alt="slider image 3">
+
 				</div>
 			<p class="txt mt-5 mb-5">
 				Не следует, однако забывать, что укрепление и развитие структуры требуют определения и уточнения системы обучения кадров, соответствует насущным потребностям. Товарищи! начало повседневной работы по формированию позиции требуют от нас анализа направлений прогрессивного развития. Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности позволяет оценить значение систем массового участия. Повседневная практика показывает, что постоянное информационно-пропагандистское обеспечение нашей деятельности в значительной степени обуславливает создание форм развития. Значимость этих проблем настолько очевидна, что постоянный количественный рост и сфера нашей активности требуют определения и уточнения новых предложений. Значимость этих проблем настолько очевидна, что сложившаяся структура организации обеспечивает широкому кругу (специалистов) участие в формировании новых предложений.
@@ -384,9 +411,23 @@
 				</div>
 			</div>
 		</footer>
-
-		<script src="./js/libs.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<div class="preloader" id="preloader"><span class="preloader__icon"></span></div>
+		<script>
+				window.onload = function() {
+					var fadeTarget = document.getElementById("preloader");
+					var fadeEffect = setInterval(function () {
+							if (!fadeTarget.style.opacity) {
+									fadeTarget.style.opacity = 1;
+							}
+							if (fadeTarget.style.opacity > 0) {
+									fadeTarget.style.opacity -= 0.1;
+							} else {
+									fadeTarget.style.display = "none";
+									clearInterval(fadeEffect);
+							}
+					}, 10);
+				}
+			</script>		<script src="./js/libs.js"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 		<script src="./js/main.js"></script>
 	</body>
