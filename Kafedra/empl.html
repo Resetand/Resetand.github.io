@@ -7,36 +7,91 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<title>Кафедра ИиИТ</title>
 		<style>
-		.preloader{
-		background-color: rgb(255, 255, 255);
-		z-index: 10000;
-		position: fixed;
-		top: 0;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		}
-		.preloader__icon{
-			animation: 1s linear 0s normal none infinite running rot;
-			z-index: 10001;
-			position: absolute;
-			top: 44%;
-			left: 50%;
-			transform: translate(-50%);
-			width: 100px;
-			height: 100px;
-			background: url("../img/svg/logosmall-black.svg") no-repeat center / 73px;
-		}
-		@keyframes rot {
-			0% {
-				transform: rotate(0deg);
-			}
-			100% {
-				transform: rotate(360deg);
-			}
-		}
-		</style>
-		<link rel="icon" href="./img/general/logosmall-black.ico" type="image/x-icon">
+			.preloader{
+				position: fixed;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background-color: rgb(255, 255, 255);
+				z-index: 10000;
+				position: fixed;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				}
+				@keyframes lds-double-ring {
+					0% {
+						-webkit-transform: rotate(0);
+						transform: rotate(0);
+					}
+					100% {
+						-webkit-transform: rotate(360deg);
+						transform: rotate(360deg);
+					}
+				}
+				@-webkit-keyframes lds-double-ring {
+					0% {
+						-webkit-transform: rotate(0);
+						transform: rotate(0);
+					}
+					100% {
+						-webkit-transform: rotate(360deg);
+						transform: rotate(360deg);
+					}
+				}
+				@keyframes lds-double-ring_reverse {
+					0% {
+						-webkit-transform: rotate(0);
+						transform: rotate(0);
+					}
+					100% {
+						-webkit-transform: rotate(-360deg);
+						transform: rotate(-360deg);
+					}
+				}
+				@-webkit-keyframes lds-double-ring_reverse {
+					0% {
+						-webkit-transform: rotate(0);
+						transform: rotate(0);
+					}
+					100% {
+						-webkit-transform: rotate(-360deg);
+						transform: rotate(-360deg);
+					}
+				}
+				.lds-double-ring {
+					position: relative;
+				}
+				.lds-double-ring div {
+					position: absolute;
+					width: 140px;
+					height: 140px;
+					top: 30px;
+					left: 30px;
+					border-radius: 50%;
+					border: 10px solid #000;
+					border-color: #222 transparent #222 transparent;
+					-webkit-animation: lds-double-ring 1s linear infinite;
+					animation: lds-double-ring 1s linear infinite;
+				}
+				.lds-double-ring div:nth-child(2) {
+					width: 116px;
+					height: 116px;
+					top: 42px;
+					left: 42px;
+					border-color: transparent #555 transparent #555;
+					-webkit-animation: lds-double-ring_reverse 1s linear infinite;
+					animation: lds-double-ring_reverse 1s linear infinite;
+				}
+				.lds-double-ring {
+					width: 100px !important;
+					height: 100px !important;
+					-webkit-transform: translate(-50px, -50px) scale(0.5) translate(50px, 50px);
+					transform: translate(-50px, -50px) scale(0.5) translate(50px, 50px);
+				}
+			</style>
+		<link rel="icon" href="./img/general/logo-black-small.ico" type="image/x-icon">
 		<link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700|Lato:400,700&amp;subset=cyrillic" rel="stylesheet">
 		<link rel="stylesheet" href="./css/libs.css" />
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -47,30 +102,34 @@
 		
 		<div class="overlay_menu"></div>
 		<header class="s-header" id="header">
-			<nav class="hidden-mnu">
-			<ul>
-				<li class="mnu-item_hid "><a href="./">О Кафедре</a></li>
-				<li class="mnu-item_hid mnu-item_hid_active"><a href="empl.html">Сотрудники</a></li>
-				<li class="mnu-item_hid "><a href="stud.html">Студенту</a></li>
-				<li class="mnu-item_hid "><a href="#">Аспиранту</a></li>
-				<li class="mnu-item_hid "><a href="#">Абитуриенту</a></li>
-				<li class="mnu-item_hid "><a href="news.html">Новости</a></li>
-			</ul>
-		</nav>
-			<div class="container">
-				<div class="header-top">
-					<div class="logo logo-header"></div>
-					<nav class="main-mnu">
-						<ul>
-							<li class="mnu-item "><a href="./">О Кафедре</a></li>
-							<li class="mnu-item mnu-item_active"><a href="empl.html">Сотрудники</a></li>
-							<li class="mnu-item "><a href="stud.html">Студенту</a></li>
-							<li class="mnu-item "><a href="#">Аспиранту</a></li>
-							<li class="mnu-item "><a href="#">Абитуриенту</a></li>
-							<li class="mnu-item "><a href="news.html">Новости</a></li>
-						</ul>
-					</nav>
-					<button class="mnu-burger"><span></span></button>
+		 <nav class="hidden-mnu">
+    <ul>
+      <li class="mnu-item_hid "><a href="./">О Кафедре</a></li>
+      <li class="mnu-item_hid mnu-item_hid_active"><a href="empl.html">Сотрудники</a></li>
+      <li class="mnu-item_hid "><a href="stud.html">Студенту</a></li>
+      <li class="mnu-item_hid "><a href="aspir.html">Аспиранту</a></li>
+      <li class="mnu-item_hid "><a href="abit.html">Абитуриенту</a></li>
+      <li class="mnu-item_hid "><a href="news.html">Новости</a></li>
+    </ul>
+  </nav>
+    <div class="container">
+      <div class="header-top">
+        <div class="logo logo-header"></div>
+        <nav class="main-mnu">
+          <ul>
+            <li class="mnu-item "><a href="./">О Кафедре</a></li>
+            <li class="mnu-item mnu-item_active"><a href="empl.html">Сотрудники</a></li>
+            <li class="mnu-item "><a href="stud.html">Студенту</a></li>
+            <li class="mnu-item "><a href="aspir.html">Аспиранту</a></li>
+            <li class="mnu-item "><a href="abit.html">Абитуриенту</a></li>
+            <li class="mnu-item "><a href="news.html">Новости</a></li>
+          </ul>
+        </nav>
+				<button class="hamburger mnu-burger hamburger--emphatic" type="button">
+						<span class="hamburger-box">
+								<span class="hamburger-inner"></span>
+							</span>
+				</button>
 					
 				</div>
 				<hr class="header-top__line">
@@ -90,25 +149,18 @@
 												<g>
 													<path d="M44.373,7.603c-10.137-10.137-26.632-10.138-36.77,0c-10.138,10.138-10.137,26.632,0,36.77s26.632,10.138,36.77,0   C54.51,34.235,54.51,17.74,44.373,7.603z M36.241,36.241c-0.781,0.781-2.047,0.781-2.828,0l-7.425-7.425l-7.778,7.778   c-0.781,0.781-2.047,0.781-2.828,0c-0.781-0.781-0.781-2.047,0-2.828l7.778-7.778l-7.425-7.425c-0.781-0.781-0.781-2.048,0-2.828   c0.781-0.781,2.047-0.781,2.828,0l7.425,7.425l7.071-7.071c0.781-0.781,2.047-0.781,2.828,0c0.781,0.781,0.781,2.047,0,2.828   l-7.071,7.071l7.425,7.425C37.022,34.194,37.022,35.46,36.241,36.241z"/>
 												</g>
+											</svg>
 										</button>
 								<div class="modal-body">
 										<div class="container ">
 												<div class="empl-info">
 													<div class="empl-photo" style="background: url('./img/content/temp/empl-ex.jpg') no-repeat center / cover;"> </div>
 													<h3 class="empl-info__title h3 text-center mb-4">Попов Дмитрий Иванович</h3>
-													<p class="dropText txt txt_xs">Попов  Дмитрий Иванович, доктор технических наук, профессор, заведующий кафедрой «Информатика и информационные технологии», директор Института открытого образования Московского государственного университета печати имени Ивана Федорова, член-корреспондент Российской академии естествознания, Член Нью-Йоркской Академии Наук (1999г.) и Ассоциации дистанционного обучения США (USDLA - United States Distance Learning Association).
-															
-															Область научных интересов - интеллектуальные системы дистанционного образования и тестирования, автоматизация и управление процессами аттестации персонала предприятий и учащихся учебных заведений, Интернет-технологии, математическое и программное обеспечение ЭВМ и сетей.
-					 
-															Попов Д.И. в 1988 году с золотой медалью окончил среднюю общеобразовательную школу №8 им.А.Г.Ломакина г.Таганрога. В 1993 году с отличием закончил Факультет автоматики и вычислительной техники Таганрогского радиотехнического института по специальности "Программное обеспечение вычислительной техники и автоматизированных систем". В 1993-2003 годах работал программистом, ассистентом, доцентом кафедры "Математического обеспечения и применения ЭВМ" Таганрогского государственного радиотехнического университета (ТРТУ). Область научных исследований и диссертационной работы в те годы была связана с разработкой и исследованием методов высокоуровневого синтеза цифровых устройств в системах сквозного автоматизированного проектирования СБИС. По тематике научных исследований "Разработка методов высокоуровневого синтеза цифровых схем и технологии использования программного обеспечения в САПР СБИС" в 1996 году проходил стажировку в Мичиганском государственном университете (США). В 1999 году на основе выигранного конкурсного гранта проводил исследования и разработку систем автоматизации и управления процессов дистанционного обучения в университете штата Орегон (США).
-															
-															С 2000 года - заведующий отделом "Интеллектуальных систем в дистанционном образовании" Центра дистанционного образования ТРТУ, руководитель и ответственный исполнитель научно-исследовательских работ Министерства образования РФ по программам "Развития открытого образования". Научно-технические разработки, сделанные в отделе под руководством Попова Д.И., позволили ТРТУ осуществить в 2001 году первый прием учащихся с применением дистанционных образовательных технологий и организовать их образовательный процесс.
-															
+													<p class="dropText txt">Попов  Дмитрий Иванович, доктор технических наук, профессор, заведующий кафедрой «Информатика и информационные технологии», директор Института открытого образования Московского государственного университета печати имени Ивана Федорова, член-корреспондент Российской академии естествознания, Член Нью-Йоркской Академии Наук (1999г.) и Ассоциации дистанционного обучения США (USDLA - United States Distance Learning Association).
+															<br>
 															В 2003 году был переведен на должность директора Центра дистанционного образования и доцента кафедры Информационных технологий Московского государственного университета печати (МГУП). Докторская диссертация посвящена решению проблем комплексной автоматизации процессов аттестации персонала промышленных предприятий. С 2003 года член аттестационных комиссий по комплексной оценке, аттестации и аккредитации вузов РФ, ведущий лектор учебных курсов Министерства образования и науки РФ по повышению квалификации профессорско-преподавательского состава вузов. С 2008 года – директор Института открытого образования, профессор и заведующий кафедрой "Информатика" МГУП, которая в последствии была преобразована в кафедру «Информатика и информационные технологии».
-															
 															Под руководством Попова Д.И. в МГУП имени Ивана Федорова в 2003 году впервые осуществлен набор учащихся на заочную форму обучения с применением дистанционных образовательных технологий, в 2007 году впервые была организована работа Интернет-студии, в которой были записаны боле 400 часов видеолекций, отработана технология проведения учебных вебинаров, организована работа по реализации электронных изданий и электронных учебно-методических комплексов для поддержки дистанционного обучения, внедрена система Интернет-тестирования учащихся МГУП имени Ивана Федорова, разработаны сотни банков тестовых заданий для оценки знаний учащихся по 5 направлениям обучения.
 															В разное время читал курсы:
-															
 															Попов Д.И. является автором более чем 150 научных и учебно-методических работ, в том числе монографий, авторских свидетельств и учебных пособий. Основатель научной школы в МГУП имени Ивана Федорова «Методология и технология создания интеллектуальных автоматизированных систем, основанных на представлении, обработке и оценке знаний в редакционно-издательских комплексах, издательском деле, принтмедиа и медиаиндустрии», в рамках которой под руководством Попова Д.И. получили звания кандидатов наук 4 аспиранта, защитили магистерские диссертации 3 выпускника. В настоящее время руководит научной работой пяти аспирантов и трех магистров.</p>
 													<button class='showMore light-but'>Подробнее...</button>
 												</div>
@@ -160,7 +212,7 @@
 							</div>
 						</div>
 								
-					</div>
+		</div>
 		
 	
 
@@ -460,7 +512,9 @@
 				</div>
 			</div>
 		</footer>
-		<div class="preloader" id="preloader"><span class="preloader__icon"></span></div>
+		<div class="preloader" id="preloader">
+			<div class="lds-css ng-scope"><div style="width:100%;height:100%" class="lds-double-ring"><div></div><div></div></div>
+		</div>
 		<script>
 					window.onload = function() {
 					var fadeTarget = document.getElementById("preloader");
@@ -483,3 +537,4 @@
 		<script src="./js/main.js"></script>
 	</body>
 	</html>
+

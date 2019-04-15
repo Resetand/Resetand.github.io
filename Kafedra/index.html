@@ -7,35 +7,90 @@
 		<title>Кафедра ИиИТ</title>
 		<style>
 		.preloader{
-		background-color: rgb(255, 255, 255);
-		z-index: 10000;
-		position: fixed;
-		top: 0;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		}
-		.preloader__icon{
-			animation: 1s linear 0s normal none infinite running rot;
-			z-index: 10001;
-			position: absolute;
-			top: 44%;
-			left: 50%;
-			transform: translate(-50%);
-			width: 100px;
-			height: 100px;
-			background: url("../img/svg/logosmall-black.svg") no-repeat center / 73px;
-		}
-		@keyframes rot {
-			0% {
-				transform: rotate(0deg);
+			position: fixed;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: rgb(255, 255, 255);
+			z-index: 10000;
+			position: fixed;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
 			}
-			100% {
-				transform: rotate(360deg);
+			@keyframes lds-double-ring {
+				0% {
+					-webkit-transform: rotate(0);
+					transform: rotate(0);
+				}
+				100% {
+					-webkit-transform: rotate(360deg);
+					transform: rotate(360deg);
+				}
 			}
-		}
+			@-webkit-keyframes lds-double-ring {
+				0% {
+					-webkit-transform: rotate(0);
+					transform: rotate(0);
+				}
+				100% {
+					-webkit-transform: rotate(360deg);
+					transform: rotate(360deg);
+				}
+			}
+			@keyframes lds-double-ring_reverse {
+				0% {
+					-webkit-transform: rotate(0);
+					transform: rotate(0);
+				}
+				100% {
+					-webkit-transform: rotate(-360deg);
+					transform: rotate(-360deg);
+				}
+			}
+			@-webkit-keyframes lds-double-ring_reverse {
+				0% {
+					-webkit-transform: rotate(0);
+					transform: rotate(0);
+				}
+				100% {
+					-webkit-transform: rotate(-360deg);
+					transform: rotate(-360deg);
+				}
+			}
+			.lds-double-ring {
+				position: relative;
+			}
+			.lds-double-ring div {
+				position: absolute;
+				width: 140px;
+				height: 140px;
+				top: 30px;
+				left: 30px;
+				border-radius: 50%;
+				border: 10px solid #000;
+				border-color: #222 transparent #222 transparent;
+				-webkit-animation: lds-double-ring 1s linear infinite;
+				animation: lds-double-ring 1s linear infinite;
+			}
+			.lds-double-ring div:nth-child(2) {
+				width: 116px;
+				height: 116px;
+				top: 42px;
+				left: 42px;
+				border-color: transparent #555 transparent #555;
+				-webkit-animation: lds-double-ring_reverse 1s linear infinite;
+				animation: lds-double-ring_reverse 1s linear infinite;
+			}
+			.lds-double-ring {
+				width: 100px !important;
+				height: 100px !important;
+				-webkit-transform: translate(-50px, -50px) scale(0.5) translate(50px, 50px);
+				transform: translate(-50px, -50px) scale(0.5) translate(50px, 50px);
+			}
 		</style>
-		<link rel="icon" href="./img/general/logosmall-black.ico" type="image/x-icon">
+		<link rel="icon" href="./img/general/logo-black-small.ico" type="image/x-icon">
 		<link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700|Lato:400,700&amp;subset=cyrillic" rel="stylesheet">
 		<link rel="stylesheet" href="./css/libs.css" />
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -46,30 +101,34 @@
 		
 		<div class="overlay_menu"></div>
 		<header class="s-header" id="header">
-			<nav class="hidden-mnu">
-			<ul>
-				<li class="mnu-item_hid mnu-item_hid_active"><a href="index.html">О Кафедре</a></li>
-				<li class="mnu-item_hid "><a href="empl.html">Сотрудники</a></li>
-				<li class="mnu-item_hid "><a href="stud.html">Студенту</a></li>
-				<li class="mnu-item_hid "><a href="#">Аспиранту</a></li>
-				<li class="mnu-item_hid "><a href="#">Абитуриенту</a></li>
-				<li class="mnu-item_hid "><a href="news.html">Новости</a></li>
-			</ul>
-		</nav>
-			<div class="container">
-				<div class="header-top">
-					<div class="logo logo-header"></div>
-					<nav class="main-mnu">
-						<ul>
-							<li class="mnu-item mnu-item_active"><a href="./">О Кафедре</a></li>
-							<li class="mnu-item "><a href="empl.html">Сотрудники</a></li>
-							<li class="mnu-item "><a href="stud.html">Студенту</a></li>
-							<li class="mnu-item "><a href="#">Аспиранту</a></li>
-							<li class="mnu-item "><a href="#">Абитуриенту</a></li>
-							<li class="mnu-item "><a href="news.html">Новости</a></li>
-						</ul>
-					</nav>
-					<button class="mnu-burger"><span></span></button>
+			 <nav class="hidden-mnu">
+    <ul>
+      <li class="mnu-item_hid mnu-item_hid_active"><a href="./">О Кафедре</a></li>
+      <li class="mnu-item_hid "><a href="empl.html">Сотрудники</a></li>
+      <li class="mnu-item_hid "><a href="stud.html">Студенту</a></li>
+      <li class="mnu-item_hid "><a href="aspir.html">Аспиранту</a></li>
+      <li class="mnu-item_hid "><a href="abit.html">Абитуриенту</a></li>
+      <li class="mnu-item_hid "><a href="news.html">Новости</a></li>
+    </ul>
+  </nav>
+    <div class="container">
+      <div class="header-top">
+        <div class="logo logo-header"></div>
+        <nav class="main-mnu">
+          <ul>
+            <li class="mnu-item mnu-item_active"><a href="./">О Кафедре</a></li>
+            <li class="mnu-item "><a href="empl.html">Сотрудники</a></li>
+            <li class="mnu-item "><a href="stud.html">Студенту</a></li>
+            <li class="mnu-item "><a href="aspir.html">Аспиранту</a></li>
+            <li class="mnu-item "><a href="abit.html">Абитуриенту</a></li>
+            <li class="mnu-item "><a href="news.html">Новости</a></li>
+          </ul>
+        </nav>
+					<button class="hamburger mnu-burger hamburger--emphatic" type="button">
+							<span class="hamburger-box">
+									<span class="hamburger-inner"></span>
+								</span>
+					</button>
 					
 				</div>
 				<hr class="header-top__line">
@@ -329,25 +388,26 @@
 									<a class="gallery-item" href="img/content/gallery_home/4.jpg"></a>
 									<a class="gallery-item" href="img/content/gallery_home/5.jpg"></a>
 								</div>
+								<div class="social-group">
+										<span class="social-group__title">Поделитесь с друзьями: </span>
+										<a href="#" class="social-group__item vk"></a>
+										<a href="#" class="social-group__item facebook"></a>
+										<a href="#" class="social-group__item telegram"></a>
+										<a href="#" class="social-group__item twitter"></a>			
+								</div>
 							</div>
 							<div class="col-12 col-xl-4 order-1 order-xl-2 m4-xl-0 mb-5">
 								<div class="gallery-desc">
 									<h3 class="h3">Что творится на Кафедре?</h3>
-									<p class="txt">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Себя не ему языкового там! Заманивший скатился силуэт языком правилами, вскоре одна дал сбить это о по всей ipsum, большого страна запятой собрал имеет первую маленькая? Раз агентство коварных деревни прямо. <br> Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Собрал по всей инициал эта? Путь ipsum страна толку агентство ее вопроса большого заголовок, последний напоивший. Подзаголовок, заглавных запятых своих даже за они маленький. Букв деревни возвращайся подпоясал свою всеми живет рыбного! Дал запятых моей свой сих за, 	</p>
+									<p class=" txt txt_xs">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Себя не ему языкового там! Заманивший скатился силуэт языком правилами, вскоре одна дал сбить это о по всей ipsum, большого страна запятой собрал имеет первую маленькая? Раз агентство коварных деревни прямо. <br> Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Собрал по всей инициал эта? Путь ipsum страна толку агентство ее вопроса большого заголовок, последний напоивший. Подзаголовок, заглавных запятых своих даже за они маленький. Букв деревни возвращайся подпоясал свою всеми живет рыбного! Дал запятых моей свой сих за, 	</p>
 									<p class="gallery-desc__btn-wrap">
-										<a href="#"class="but gallery-desc__btn">Новости Кафедры</a>
+										<a href="news.html"class="but gallery-desc__btn">Новости Кафедры</a> 
 									</p>
 								</div>
 							</div>
+							
 					</div>
-					<div class="social-group">
-						<span class="social-group__title">Поделитесь с друзьями: </span>
-						<a href="#" class="social-group__item vk"></a>
-						<a href="#" class="social-group__item facebook"></a>
-						<a href="#" class="social-group__item telegram"></a>
-						<a href="#" class="social-group__item twitter"></a>
-
-					</div>
+					
 				</div>
 			</section>
 
@@ -411,7 +471,9 @@
 				</div>
 			</div>
 		</footer>
-		<div class="preloader" id="preloader"><span class="preloader__icon"></span></div>
+		<div class="preloader" id="preloader">
+			<div class="lds-css ng-scope"><div style="width:100%;height:100%" class="lds-double-ring"><div></div><div></div></div>
+		</div>
 		<script>
 				window.onload = function() {
 					var fadeTarget = document.getElementById("preloader");

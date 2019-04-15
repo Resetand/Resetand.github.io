@@ -1,41 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+ 
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<title>Кафедра ИиИТ</title>
 		<style>
-		.preloader{
-		background-color: rgb(255, 255, 255);
-		z-index: 10000;
-		position: fixed;
-		top: 0;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		}
-		.preloader__icon{
-			animation: 1s linear 0s normal none infinite running rot;
-			z-index: 10001;
-			position: fixed;
-			top: 45%;
-			left: 50%;
-			transform: translate(-50%);
-			width: 73px;
-			height: 73px;
-			background: url("../img/svg/logosmall-black.svg") no-repeat center / 73px;
-		}
-		@keyframes rot {
-			0% {
-				transform: rotate(0deg);
-			}
-			100% {
-				transform: rotate(360deg);
-			}
-		}
-		</style>
-		<link rel="icon" href="./img/general/logosmall-black.ico" type="image/x-icon">
+      .preloader{
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(255, 255, 255);
+        z-index: 10000;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        }
+        @keyframes lds-double-ring {
+          0% {
+            -webkit-transform: rotate(0);
+            transform: rotate(0);
+          }
+          100% {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+          }
+        }
+        @-webkit-keyframes lds-double-ring {
+          0% {
+            -webkit-transform: rotate(0);
+            transform: rotate(0);
+          }
+          100% {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+          }
+        }
+        @keyframes lds-double-ring_reverse {
+          0% {
+            -webkit-transform: rotate(0);
+            transform: rotate(0);
+          }
+          100% {
+            -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+          }
+        }
+        @-webkit-keyframes lds-double-ring_reverse {
+          0% {
+            -webkit-transform: rotate(0);
+            transform: rotate(0);
+          }
+          100% {
+            -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+          }
+        }
+        .lds-double-ring {
+          position: relative;
+        }
+        .lds-double-ring div {
+          position: absolute;
+          width: 140px;
+          height: 140px;
+          top: 30px;
+          left: 30px;
+          border-radius: 50%;
+          border: 10px solid #000;
+          border-color: #222 transparent #222 transparent;
+          -webkit-animation: lds-double-ring 1s linear infinite;
+          animation: lds-double-ring 1s linear infinite;
+        }
+        .lds-double-ring div:nth-child(2) {
+          width: 116px;
+          height: 116px;
+          top: 42px;
+          left: 42px;
+          border-color: transparent #555 transparent #555;
+          -webkit-animation: lds-double-ring_reverse 1s linear infinite;
+          animation: lds-double-ring_reverse 1s linear infinite;
+        }
+        .lds-double-ring {
+          width: 100px !important;
+          height: 100px !important;
+          -webkit-transform: translate(-50px, -50px) scale(0.5) translate(50px, 50px);
+          transform: translate(-50px, -50px) scale(0.5) translate(50px, 50px);
+        }
+      </style>
+		<link rel="icon" href="./img/general/logo-black-small.ico" type="image/x-icon">
 		<link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700|Lato:400,700&amp;subset=cyrillic" rel="stylesheet">
 		<link rel="stylesheet" href="./css/libs.css" />
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -47,11 +103,11 @@
   <header class="s-header" id="header">
     <nav class="hidden-mnu">
     <ul>
-      <li class="mnu-item_hid "><a href="index.html">О Кафедре</a></li>
+      <li class="mnu-item_hid "><a href="./">О Кафедре</a></li>
       <li class="mnu-item_hid "><a href="empl.html">Сотрудники</a></li>
       <li class="mnu-item_hid mnu-item_hid_active"><a href="stud.html">Студенту</a></li>
-      <li class="mnu-item_hid "><a href="#">Аспиранту</a></li>
-      <li class="mnu-item_hid "><a href="#">Абитуриенту</a></li>
+      <li class="mnu-item_hid "><a href="aspir.html">Аспиранту</a></li>
+      <li class="mnu-item_hid "><a href="abit.html">Абитуриенту</a></li>
       <li class="mnu-item_hid "><a href="news.html">Новости</a></li>
     </ul>
   </nav>
@@ -60,15 +116,19 @@
         <div class="logo logo-header"></div>
         <nav class="main-mnu">
           <ul>
-            <li class="mnu-item "><a href="index.html">О Кафедре</a></li>
+            <li class="mnu-item "><a href="./">О Кафедре</a></li>
             <li class="mnu-item "><a href="empl.html">Сотрудники</a></li>
             <li class="mnu-item mnu-item_active"><a href="stud.html">Студенту</a></li>
-            <li class="mnu-item "><a href="#">Аспиранту</a></li>
-            <li class="mnu-item "><a href="#">Абитуриенту</a></li>
+            <li class="mnu-item "><a href="aspir.html">Аспиранту</a></li>
+            <li class="mnu-item "><a href="abit.html">Абитуриенту</a></li>
             <li class="mnu-item "><a href="news.html">Новости</a></li>
           </ul>
         </nav>
-        <button class="mnu-burger"><span></span></button>
+        <button class="hamburger mnu-burger hamburger--emphatic" type="button">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
+        </button>
         
       </div>
       <hr class="header-top__line">
@@ -78,6 +138,24 @@
       </div>
     </div>
   </header>
+  <div class="modal  fade" id="studModal" tabindex="-1" role="dialog" aria-labelledby="studModalLabel" aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <h3 class=" h3 modal-title">Примеры оформления лабораторных работ по ОСА - 1 курс ИПиТ</h3>
+            <button type="button" class="close_modal" data-dismiss="modal" aria-label="Close">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 51.976 51.976" style="enable-background:new 0 0 51.976 51.976;" xml:space="preserve">
+                  <g>
+                    <path d="M44.373,7.603c-10.137-10.137-26.632-10.138-36.77,0c-10.138,10.138-10.137,26.632,0,36.77s26.632,10.138,36.77,0   C54.51,34.235,54.51,17.74,44.373,7.603z M36.241,36.241c-0.781,0.781-2.047,0.781-2.828,0l-7.425-7.425l-7.778,7.778   c-0.781,0.781-2.047,0.781-2.828,0c-0.781-0.781-0.781-2.047,0-2.828l7.778-7.778l-7.425-7.425c-0.781-0.781-0.781-2.048,0-2.828   c0.781-0.781,2.047-0.781,2.828,0l7.425,7.425l7.071-7.071c0.781-0.781,2.047-0.781,2.828,0c0.781,0.781,0.781,2.047,0,2.828   l-7.071,7.071l7.425,7.425C37.022,34.194,37.022,35.46,36.241,36.241z"/>
+                  </g>
+                </svg>
+              </button>
+          <div class="modal-body"><h2>. . .</h2></div>
+          <div class="modal-footer"></div>
+        </div>
+      </div>
+          
+</div>
 
   <section class="stud-top">
         <div class="container">
@@ -103,7 +181,7 @@
             <div class="row">
 
               <div class="col-12 mb-3">
-                <a href="#" class="stud-card">
+                <a href="#" class="stud-card" data-toggle="modal" data-target="#studModal">
                   <span class="stud-card__title">Примеры оформления лабораторных работ ОСА - 1 курс</span>
                   <div class="stud-card__tags">
                     <span class="stud-card__tag">ИСиТ</span><span class="stud-card__tag">1 курс</span>
@@ -112,7 +190,7 @@
                 </a>
               </div>
               <div class="col-12 mb-3">
-                <a href="#" class="stud-card">
+                <a href="#" class="stud-card" data-toggle="modal" data-target="#studModal">
                   <span class="stud-card__title">Вопросы к экзамену по ООП, 2 курс</span>
                   <div class="stud-card__tags">
                     <span class="stud-card__tag">ПОИКИ</span><span class="stud-card__tag">2 курс</span>
@@ -121,7 +199,7 @@
                 </a>
               </div>
               <div class="col-12 mb-3">
-                <a href="#" class="stud-card">
+                <a href="#" class="stud-card" data-toggle="modal" data-target="#studModal">
                   <span class="stud-card__title">Примеры оформления лабораторных работ ОСА - 1 курс</span>
                   <div class="stud-card__tags">
                     <span class="stud-card__tag">ИСиТ</span><span class="stud-card__tag">1 курс</span>
@@ -130,7 +208,7 @@
                 </a>
               </div>
               <div class="col-12 mb-3">
-                <a href="#" class="stud-card">
+                <a href="#" class="stud-card" data-toggle="modal" data-target="#studModal">
                   <span class="stud-card__title">Вопросы к экзамену по ООП, 2 курс</span>
                   <div class="stud-card__tags">
                     <span class="stud-card__tag">ПОИКИ</span><span class="stud-card__tag">2 курс</span>
@@ -139,7 +217,7 @@
                 </a>
               </div>
               <div class="col-12 mb-3">
-                <a href="#" class="stud-card">
+                <a href="#" class="stud-card" data-toggle="modal" data-target="#studModal">
                   <span class="stud-card__title">Примеры оформления лабораторных работ ОСА - 1 курс</span>
                   <div class="stud-card__tags">
                     <span class="stud-card__tag">ИСиТ</span><span class="stud-card__tag">1 курс</span>
@@ -148,7 +226,7 @@
                 </a>
               </div>
               <div class="col-12 mb-3">
-                <a href="#" class="stud-card">
+                <a href="#" class="stud-card" data-toggle="modal" data-target="#studModal">
                   <span class="stud-card__title">Вопросы к экзамену по ООП, 2 курс</span>
                   <div class="stud-card__tags">
                     <span class="stud-card__tag">ПОИКИ</span><span class="stud-card__tag">2 курс</span>
@@ -157,7 +235,7 @@
                 </a>
               </div>
               <div class="col-12 mb-3">
-                <a href="#" class="stud-card">
+                <a href="#" class="stud-card" data-toggle="modal" data-target="#studModal">
                   <span class="stud-card__title">Примеры оформления лабораторных работ ОСА - 1 курс</span>
                   <div class="stud-card__tags">
                     <span class="stud-card__tag">ИСиТ</span><span class="stud-card__tag">1 курс</span>
@@ -166,7 +244,7 @@
                 </a>
               </div>
               <div class="col-12 mb-3">
-                <a href="#" class="stud-card">
+                <a href="#" class="stud-card" data-toggle="modal" data-target="#studModal">
                   <span class="stud-card__title">Вопросы к экзамену по ООП, 2 курс</span>
                   <div class="stud-card__tags">
                     <span class="stud-card__tag">ПОИКИ</span><span class="stud-card__tag">2 курс</span>
@@ -175,7 +253,7 @@
                 </a>
               </div>
               <div class="col-12 mb-3">
-                <a href="#" class="stud-card">
+                <a href="#" class="stud-card" data-toggle="modal" data-target="#studModal">
                   <span class="stud-card__title">Примеры оформления лабораторных работ ОСА - 1 курс</span>
                   <div class="stud-card__tags">
                     <span class="stud-card__tag">ИСиТ</span><span class="stud-card__tag">1 курс</span>
@@ -184,7 +262,7 @@
                 </a>
               </div>
               <div class="col-12 mb-3">
-                <a href="#" class="stud-card">
+                <a href="#" class="stud-card" data-toggle="modal" data-target="#studModal">
                   <span class="stud-card__title">Вопросы к экзамену по ООП, 2 курс</span>
                   <div class="stud-card__tags">
                     <span class="stud-card__tag">ПОИКИ</span><span class="stud-card__tag">2 курс</span>
@@ -328,10 +406,17 @@
 				</div>
 			</div>
 		</footer>
-		<div class="preloader" id="preloader"><span class="preloader__icon"></span></div>
+		<div class="preloader" id="preloader">
+			<div class="lds-css ng-scope"><div style="width:100%;height:100%" class="lds-double-ring"><div></div><div></div></div>
+    </div>
+    
+    
+
 		<script>
 				window.onload = function() {
-					var fadeTarget = document.getElementById("preloader");
+          var fadeTarget = document.getElementById("preloader");
+          document.body.style.overflowX = "hidden";
+          console.log(document)
 					var fadeEffect = setInterval(function () {
 							if (!fadeTarget.style.opacity) {
 									fadeTarget.style.opacity = 1;
@@ -339,12 +424,14 @@
 							if (fadeTarget.style.opacity > 0) {
 									fadeTarget.style.opacity -= 0.1;
 							} else {
-									fadeTarget.style.display = "none";
+                  fadeTarget.style.display = "none";
+                  document.body.style.overflowX = "auto";
 									clearInterval(fadeEffect);
 							}
 					}, 10);
 				}
-			</script>		<script src="./js/libs.js"></script>
+      </script>		
+      <script src="./js/libs.js"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 		<script src="./js/main.js"></script>
 	</body>
