@@ -1,12 +1,12 @@
 # My sites
 
 
-+ [>-- Kafedra site --<](Resetand.github.io/Kafedra/)
++ [>-- Kafedra site --<](https://Resetand.github.io/Kafedra/)
 
-+ [Bear](Resetand.github.io/Bear/)
-+ [Creatives](Resetand.github.io/Creatives/)
-+ [FDN](Resetand.github.io/FDN/)
-+ [Pomodoro timer](Resetand.github.io/Pomodoro/)
++ [Bear](https://Resetand.github.io/Bear/)
++ [Creatives](https://Resetand.github.io/Creatives/)
++ [FDN](https://Resetand.github.io/FDN/)
++ [Pomodoro timer]https://(Resetand.github.io/Pomodoro/)
     
 
     
