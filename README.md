@@ -6,7 +6,7 @@
 + [Bear](https://Resetand.github.io/Bear/)
 + [Creatives](https://Resetand.github.io/Creatives/)
 + [FDN](https://Resetand.github.io/FDN/)
-+ [Pomodoro timer]https://(Resetand.github.io/Pomodoro/)
++ [Pomodoro timer](https://Resetand.github.io/Pomodoro/)
     
 
     
