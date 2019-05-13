@@ -1,0 +1,183 @@
+/*Медиазапросы*/
+
+/* LIBS*/
+@font-face {
+	font-family: FontAwesome;
+	src:url(../fonts/FontAwesome/FontAwesome.otf);
+}
+
+/* ______________________________________ */ 
+
+
+
+/* Large desktop */
+@media (min-width: 1300px) { 
+	.inputs-composition{
+		width: 90%;
+		margin-left: 5%;
+	}
+}
+/* ______________________________________ */ 
+@media (max-width: 1200px) {
+	.skills-commposition{
+		padding-top: 30%;
+	}
+	.images-composition img{
+		width: 33.3% !important;
+	}
+	.header-search{
+		transform: translateX(0);
+	}
+
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (max-width: 1000px) {
+	.nav-col{
+		margin-top: 20px !important;
+	}
+	.footer-social{
+		margin-top: 20px
+	}
+	.header__composition{
+		text-align: center;
+	}
+	.container{
+		width: 90%
+	} 
+	.navbar{
+		background-color: rgba(0,0,0,0.05);
+		border-radius: 7px;
+	}
+	.navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link{
+		transition: color 0s ease;
+		border-radius: 7px !important;      
+	}
+	.nav-link{
+		transition: 0s ease !important;
+		padding: 20px 0 !important;
+	} 
+	.nav-link:hover{
+		background-color: #10C9C3 !important;
+		color: #191919 !important;
+	}
+	.nav-item > .nav-link:hover{
+		color: #fff !important;
+	}
+	.header-search{
+		display: block;
+		position: relative;
+	}
+	#search-window{
+		width: 30vw;
+		transition: color 1s ease-out;
+		transition: background-color 1s ease-out;
+		transition: transform .3s ease-out;
+	}
+	#submit-search{
+		color: #dddddd !important;
+	}
+	.active-window:hover{
+		background-color:#dddddd !important;
+	}
+	
+
+}
+/* ______________________________________ */ 
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+	.blue-button a{
+		font-size: 12px;
+		padding: 15px 30px; 
+	}
+	.header__composition .headline{
+		font-size: 30px;
+	}
+	.work-item{
+		width: 33.3%;
+	}
+	.work-item-hide{
+		display: block;
+	}
+	.play-circle{
+		width: 55px !important;
+		height: 55px !important;
+	}
+
+	.play-arrow img{
+		width: 7px !important;
+		height: auto;
+	}
+	.quote{
+		font-size: 30px;
+	}
+	.footer-nav{
+		display: none;
+	}
+	.client-items{
+		display: block;
+		text-align: center;
+	}
+	.client-items img{
+		margin-bottom: 20px;
+
+	}
+	.footer-cont-data{
+		margin-top: 20px;
+	}
+	.process-video iframe{
+		width: 100% !important;
+		height: 300px;
+	}
+ }
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) {
+	.process-video iframe{
+		width: 100% !important;
+		height: 200px;
+	}
+	footer{
+		text-align: center;
+	}
+	.footer-navbar{
+		justify-content: center;
+	}
+	.header-search{
+		width: 40vw;
+		position: relative;
+		margin-left: -20px;
+	} 
+	header .container{
+		width: 100%;
+	}
+	#submit-search{
+		top: 0;
+		left:90%;
+		position: absolute;
+	}
+	#search-window{
+		width: 90%;
+	}
+	#search-window{
+		outline: none;
+	}
+	.active-window{
+		outline: none;
+		background-color: unset;
+		transform: unset;
+	}
+	.quote{
+		font-size: 20px;
+	}
+	.skills-commposition{
+		padding-left: 10%;
+	}
+	header .headline{
+		font-size: 25px !important;
+	}
+	.portfolio-item{
+		margin-left: 18%;
+	}
+ }
