@@ -1,0 +1,540 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Кафедра ИиИТ</title>
+		<style>
+			.preloader{
+				position: fixed;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background-color: rgb(255, 255, 255);
+				z-index: 10000;
+				position: fixed;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				}
+				@keyframes lds-double-ring {
+					0% {
+						-webkit-transform: rotate(0);
+						transform: rotate(0);
+					}
+					100% {
+						-webkit-transform: rotate(360deg);
+						transform: rotate(360deg);
+					}
+				}
+				@-webkit-keyframes lds-double-ring {
+					0% {
+						-webkit-transform: rotate(0);
+						transform: rotate(0);
+					}
+					100% {
+						-webkit-transform: rotate(360deg);
+						transform: rotate(360deg);
+					}
+				}
+				@keyframes lds-double-ring_reverse {
+					0% {
+						-webkit-transform: rotate(0);
+						transform: rotate(0);
+					}
+					100% {
+						-webkit-transform: rotate(-360deg);
+						transform: rotate(-360deg);
+					}
+				}
+				@-webkit-keyframes lds-double-ring_reverse {
+					0% {
+						-webkit-transform: rotate(0);
+						transform: rotate(0);
+					}
+					100% {
+						-webkit-transform: rotate(-360deg);
+						transform: rotate(-360deg);
+					}
+				}
+				.lds-double-ring {
+					position: relative;
+				}
+				.lds-double-ring div {
+					position: absolute;
+					width: 140px;
+					height: 140px;
+					top: 30px;
+					left: 30px;
+					border-radius: 50%;
+					border: 10px solid #000;
+					border-color: #222 transparent #222 transparent;
+					-webkit-animation: lds-double-ring 1s linear infinite;
+					animation: lds-double-ring 1s linear infinite;
+				}
+				.lds-double-ring div:nth-child(2) {
+					width: 116px;
+					height: 116px;
+					top: 42px;
+					left: 42px;
+					border-color: transparent #555 transparent #555;
+					-webkit-animation: lds-double-ring_reverse 1s linear infinite;
+					animation: lds-double-ring_reverse 1s linear infinite;
+				}
+				.lds-double-ring {
+					width: 100px !important;
+					height: 100px !important;
+					-webkit-transform: translate(-50px, -50px) scale(0.5) translate(50px, 50px);
+					transform: translate(-50px, -50px) scale(0.5) translate(50px, 50px);
+				}
+			</style>
+		<link rel="icon" href="./img/general/logo-black-small.ico" type="image/x-icon">
+		<link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700|Lato:400,700&amp;subset=cyrillic" rel="stylesheet">
+		<link rel="stylesheet" href="./css/libs.css" />
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" href="./css/main.css" />
+	</head>
+	
+	<body>
+		
+		<div class="overlay_menu"></div>
+		<header class="s-header" id="header">
+		 <nav class="hidden-mnu">
+    <ul>
+      <li class="mnu-item_hid "><a href="./">О Кафедре</a></li>
+      <li class="mnu-item_hid mnu-item_hid_active"><a href="empl.html">Сотрудники</a></li>
+      <li class="mnu-item_hid "><a href="stud.html">Студенту</a></li>
+      <li class="mnu-item_hid "><a href="aspir.html">Аспиранту</a></li>
+      <li class="mnu-item_hid "><a href="abit.html">Абитуриенту</a></li>
+      <li class="mnu-item_hid "><a href="news.html">Новости</a></li>
+    </ul>
+  </nav>
+    <div class="container">
+      <div class="header-top">
+        <div class="logo logo-header"></div>
+        <nav class="main-mnu">
+          <ul>
+            <li class="mnu-item "><a href="./">О Кафедре</a></li>
+            <li class="mnu-item mnu-item_active"><a href="empl.html">Сотрудники</a></li>
+            <li class="mnu-item "><a href="stud.html">Студенту</a></li>
+            <li class="mnu-item "><a href="aspir.html">Аспиранту</a></li>
+            <li class="mnu-item "><a href="abit.html">Абитуриенту</a></li>
+            <li class="mnu-item "><a href="news.html">Новости</a></li>
+          </ul>
+        </nav>
+				<button class="hamburger mnu-burger hamburger--emphatic" type="button">
+						<span class="hamburger-box">
+								<span class="hamburger-inner"></span>
+							</span>
+				</button>
+					
+				</div>
+				<hr class="header-top__line">
+				<div class="header-accent">
+					<h1 class="h1">Информатика и информационные технологии</h1>
+					<h4 class="h4">Познакомтесь с нашей кафедрой</h4>
+				</div>
+			</div>
+		</header>
+		
+		<div class="modal bd-example-modal-xl fade" id="emplModal" tabindex="-1" role="dialog" aria-labelledby="emplModalLabel" aria-hidden="true">
+
+					<div class="modal-dialog modal-xl" role="document">
+							<div class="modal-content">
+									<button type="button" class="close_modal" data-dismiss="modal" aria-label="Close">
+											<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 51.976 51.976" style="enable-background:new 0 0 51.976 51.976;" xml:space="preserve">
+												<g>
+													<path d="M44.373,7.603c-10.137-10.137-26.632-10.138-36.77,0c-10.138,10.138-10.137,26.632,0,36.77s26.632,10.138,36.77,0   C54.51,34.235,54.51,17.74,44.373,7.603z M36.241,36.241c-0.781,0.781-2.047,0.781-2.828,0l-7.425-7.425l-7.778,7.778   c-0.781,0.781-2.047,0.781-2.828,0c-0.781-0.781-0.781-2.047,0-2.828l7.778-7.778l-7.425-7.425c-0.781-0.781-0.781-2.048,0-2.828   c0.781-0.781,2.047-0.781,2.828,0l7.425,7.425l7.071-7.071c0.781-0.781,2.047-0.781,2.828,0c0.781,0.781,0.781,2.047,0,2.828   l-7.071,7.071l7.425,7.425C37.022,34.194,37.022,35.46,36.241,36.241z"/>
+												</g>
+											</svg>
+										</button>
+								<div class="modal-body">
+										<div class="container ">
+												<div class="empl-info">
+													<div class="empl-photo" style="background: url('./img/content/temp/empl-ex.jpg') no-repeat center / cover;"> </div>
+													<h3 class="empl-info__title h3 text-center mb-4">Попов Дмитрий Иванович</h3>
+													<p class="dropText txt">Попов  Дмитрий Иванович, доктор технических наук, профессор, заведующий кафедрой «Информатика и информационные технологии», директор Института открытого образования Московского государственного университета печати имени Ивана Федорова, член-корреспондент Российской академии естествознания, Член Нью-Йоркской Академии Наук (1999г.) и Ассоциации дистанционного обучения США (USDLA - United States Distance Learning Association).
+															<br>
+															В 2003 году был переведен на должность директора Центра дистанционного образования и доцента кафедры Информационных технологий Московского государственного университета печати (МГУП). Докторская диссертация посвящена решению проблем комплексной автоматизации процессов аттестации персонала промышленных предприятий. С 2003 года член аттестационных комиссий по комплексной оценке, аттестации и аккредитации вузов РФ, ведущий лектор учебных курсов Министерства образования и науки РФ по повышению квалификации профессорско-преподавательского состава вузов. С 2008 года – директор Института открытого образования, профессор и заведующий кафедрой "Информатика" МГУП, которая в последствии была преобразована в кафедру «Информатика и информационные технологии».
+															Под руководством Попова Д.И. в МГУП имени Ивана Федорова в 2003 году впервые осуществлен набор учащихся на заочную форму обучения с применением дистанционных образовательных технологий, в 2007 году впервые была организована работа Интернет-студии, в которой были записаны боле 400 часов видеолекций, отработана технология проведения учебных вебинаров, организована работа по реализации электронных изданий и электронных учебно-методических комплексов для поддержки дистанционного обучения, внедрена система Интернет-тестирования учащихся МГУП имени Ивана Федорова, разработаны сотни банков тестовых заданий для оценки знаний учащихся по 5 направлениям обучения.
+															В разное время читал курсы:
+															Попов Д.И. является автором более чем 150 научных и учебно-методических работ, в том числе монографий, авторских свидетельств и учебных пособий. Основатель научной школы в МГУП имени Ивана Федорова «Методология и технология создания интеллектуальных автоматизированных систем, основанных на представлении, обработке и оценке знаний в редакционно-издательских комплексах, издательском деле, принтмедиа и медиаиндустрии», в рамках которой под руководством Попова Д.И. получили звания кандидатов наук 4 аспиранта, защитили магистерские диссертации 3 выпускника. В настоящее время руководит научной работой пяти аспирантов и трех магистров.</p>
+													<button class='showMore light-but'>Подробнее...</button>
+												</div>
+												<div class="row mt-5">
+													<div class="col-6 text-center col-sm-6 col-md-4">
+														<div class="eml-skill">
+															<div class="eml-skill__icon eml-skill__icon_time"></div>
+															<div class="eml-skill__info">
+																<span class="eml-skill__info_num">13</span>
+																 лет стаж преподавания
+															</div>
+														</div>
+													</div>
+													
+													<div class="col-6 text-center col-sm-6 col-md-4">
+														<div class="eml-skill">
+															<div class="eml-skill__icon eml-skill__icon_index"></div>
+															<div class="eml-skill__info">
+																<span class="eml-skill__info_num">4.5</span> - индекс
+																Хирша*
+															</div>
+														</div>
+													</div>
+													
+													<div class="col-6 text-center col-sm-6 col-md-4 mx-auto">
+														<div class="eml-skill">
+															<div class="eml-skill__icon eml-skill__icon_works"></div>
+															<div class="eml-skill__info">
+																<span class="eml-skill__info_num">113</span> - кол-во научных работ 
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="empl-diplomsthems">
+													<h4 class="h4 h4_black mt-5 mb-4">Тематика выпускных квалификационных работ</h4>
+													<p class="txt">Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей.</p>
+													<ul class='empl-diplomsthems__list mt-4'>
+														<li>Анализ результатов тестирования</li>
+														<li>Cетевым технологии и оформление и дизайну электронных изданий</li>
+														<li>Приложение к разработке и управлению базами данных</li>
+													</ul>
+												</div>
+										</div>
+										
+								</div>
+								<div class="modal-footer">
+									
+								</div>
+							</div>
+						</div>
+								
+		</div>
+		
+	
+
+		<main class="content" id="mainEmpl" role="main">
+				<section class="s-description">
+						<div class="container">
+							<div class="desc-accent">
+								<h2 class="h2 h2-ico h2-ico_team">Сотрудники</h2>
+								<p class="txt">С другой стороны постоянное информационно-пропагандистское обеспечение нашей деятельности требуют определения и уточнения позиций, занимаемых участниками в отношении поставленных задач. Задача организации, в особенности же постоянное информационно-пропагандистское обеспечение нашей деятельности в значительной степени обуславливает создание существенных финансовых и административных условий.</p>
+							</div>
+						</div>
+					</section>
+					
+					<section class="empl-main">
+						<div class="container">
+							<div class="search-block">
+								<form class="search-form">
+										<input id="searchEmpl" placeholder="Начните вводить имя ..." class="search search_empl form-control" type="text"  aria-label="Search">
+								</form>
+							</div>
+							<div class="empl-cards">
+								<div class="row">
+									<div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+										<a href="#" data-toggle="modal" data-target="#emplModal"  class="empl-card">
+											<div class="empl-card__name">Попов <br> Дмитрий Иванович</div>
+											<div class="empl-card__position">Профессор, зав. кафедрой</div>
+											<div class="empl-card__link-icon">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.559 12.559"><defs><style>.a{fill:#d6d9d9;}</style></defs><g transform="translate(-0.003)"><path class="a" d="M11.871.691A2.268,2.268,0,0,0,10.207,0H2.358A2.269,2.269,0,0,0,.694.691,2.268,2.268,0,0,0,0,2.355V10.2a2.269,2.269,0,0,0,.691,1.664,2.268,2.268,0,0,0,1.664.691h7.849A2.359,2.359,0,0,0,12.562,10.2V2.355A2.269,2.269,0,0,0,11.871.691Zm-1.4,5.85a.489.489,0,0,1-.319.482.569.569,0,0,1-.2.041.486.486,0,0,1-.368-.155L8.4,5.732,4.034,10.1a.514.514,0,0,1-.736,0l-.834-.834a.513.513,0,0,1,0-.736L6.831,4.162,5.653,2.984a.472.472,0,0,1-.115-.572.489.489,0,0,1,.482-.319H9.946a.531.531,0,0,1,.523.523V6.541Z" transform="translate(0 0)"/></g></svg>
+											</div>
+										</a>
+									</div>
+
+									<div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+										<a ref="#" data-toggle="modal" data-target="#emplModal"  class="empl-card">
+											<div class="empl-card__name">Булатников <br> Евгений Владиславович</div>
+											<div class="empl-card__position">Доцент</div>
+											<div class="empl-card__link-icon">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.559 12.559"><defs><style>.a{fill:#d6d9d9;}</style></defs><g transform="translate(-0.003)"><path class="a" d="M11.871.691A2.268,2.268,0,0,0,10.207,0H2.358A2.269,2.269,0,0,0,.694.691,2.268,2.268,0,0,0,0,2.355V10.2a2.269,2.269,0,0,0,.691,1.664,2.268,2.268,0,0,0,1.664.691h7.849A2.359,2.359,0,0,0,12.562,10.2V2.355A2.269,2.269,0,0,0,11.871.691Zm-1.4,5.85a.489.489,0,0,1-.319.482.569.569,0,0,1-.2.041.486.486,0,0,1-.368-.155L8.4,5.732,4.034,10.1a.514.514,0,0,1-.736,0l-.834-.834a.513.513,0,0,1,0-.736L6.831,4.162,5.653,2.984a.472.472,0,0,1-.115-.572.489.489,0,0,1,.482-.319H9.946a.531.531,0,0,1,.523.523V6.541Z" transform="translate(0 0)"/></g></svg>
+											</div>
+										</a>
+									</div>
+
+									<div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+										<a ref="#" data-toggle="modal" data-target="#emplModal"  class="empl-card">
+											<div class="empl-card__name">Белоусов  <br> Игорь Рафаилович</div>
+											<div class="empl-card__position">Профессор</div>
+											<div class="empl-card__link-icon">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.559 12.559"><defs><style>.a{fill:#d6d9d9;}</style></defs><g transform="translate(-0.003)"><path class="a" d="M11.871.691A2.268,2.268,0,0,0,10.207,0H2.358A2.269,2.269,0,0,0,.694.691,2.268,2.268,0,0,0,0,2.355V10.2a2.269,2.269,0,0,0,.691,1.664,2.268,2.268,0,0,0,1.664.691h7.849A2.359,2.359,0,0,0,12.562,10.2V2.355A2.269,2.269,0,0,0,11.871.691Zm-1.4,5.85a.489.489,0,0,1-.319.482.569.569,0,0,1-.2.041.486.486,0,0,1-.368-.155L8.4,5.732,4.034,10.1a.514.514,0,0,1-.736,0l-.834-.834a.513.513,0,0,1,0-.736L6.831,4.162,5.653,2.984a.472.472,0,0,1-.115-.572.489.489,0,0,1,.482-.319H9.946a.531.531,0,0,1,.523.523V6.541Z" transform="translate(0 0)"/></g></svg>
+											</div>
+										</a>
+									</div>
+
+									<div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+										<a ref="#" data-toggle="modal" data-target="#emplModal"  class="empl-card">
+											<div class="empl-card__name">Денисов   <br> Дмитрий Александрович</div>
+											<div class="empl-card__position">Доцент</div>
+											<div class="empl-card__link-icon">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.559 12.559"><defs><style>.a{fill:#d6d9d9;}</style></defs><g transform="translate(-0.003)"><path class="a" d="M11.871.691A2.268,2.268,0,0,0,10.207,0H2.358A2.269,2.269,0,0,0,.694.691,2.268,2.268,0,0,0,0,2.355V10.2a2.269,2.269,0,0,0,.691,1.664,2.268,2.268,0,0,0,1.664.691h7.849A2.359,2.359,0,0,0,12.562,10.2V2.355A2.269,2.269,0,0,0,11.871.691Zm-1.4,5.85a.489.489,0,0,1-.319.482.569.569,0,0,1-.2.041.486.486,0,0,1-.368-.155L8.4,5.732,4.034,10.1a.514.514,0,0,1-.736,0l-.834-.834a.513.513,0,0,1,0-.736L6.831,4.162,5.653,2.984a.472.472,0,0,1-.115-.572.489.489,0,0,1,.482-.319H9.946a.531.531,0,0,1,.523.523V6.541Z" transform="translate(0 0)"/></g></svg>
+											</div>
+										</a>
+									</div>
+
+									<div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+										<a ref="#" data-toggle="modal" data-target="#emplModal"  class="empl-card">
+											<div class="empl-card__name">Мосалев    <br> Павел Михайлович</div>
+											<div class="empl-card__position">Ассистент</div>
+											<div class="empl-card__link-icon">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.559 12.559"><defs><style>.a{fill:#d6d9d9;}</style></defs><g transform="translate(-0.003)"><path class="a" d="M11.871.691A2.268,2.268,0,0,0,10.207,0H2.358A2.269,2.269,0,0,0,.694.691,2.268,2.268,0,0,0,0,2.355V10.2a2.269,2.269,0,0,0,.691,1.664,2.268,2.268,0,0,0,1.664.691h7.849A2.359,2.359,0,0,0,12.562,10.2V2.355A2.269,2.269,0,0,0,11.871.691Zm-1.4,5.85a.489.489,0,0,1-.319.482.569.569,0,0,1-.2.041.486.486,0,0,1-.368-.155L8.4,5.732,4.034,10.1a.514.514,0,0,1-.736,0l-.834-.834a.513.513,0,0,1,0-.736L6.831,4.162,5.653,2.984a.472.472,0,0,1-.115-.572.489.489,0,0,1,.482-.319H9.946a.531.531,0,0,1,.523.523V6.541Z" transform="translate(0 0)"/></g></svg>
+											</div>
+										</a>
+									</div>
+										
+									<div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+										<a ref="#" data-toggle="modal" data-target="#emplModal"  class="empl-card">
+											<div class="empl-card__name">Шурыгин <br> Владимир Николаевич </div>
+											<div class="empl-card__position">Профессор</div>
+											<div class="empl-card__link-icon">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.559 12.559"><defs><style>.a{fill:#d6d9d9;}</style></defs><g transform="translate(-0.003)"><path class="a" d="M11.871.691A2.268,2.268,0,0,0,10.207,0H2.358A2.269,2.269,0,0,0,.694.691,2.268,2.268,0,0,0,0,2.355V10.2a2.269,2.269,0,0,0,.691,1.664,2.268,2.268,0,0,0,1.664.691h7.849A2.359,2.359,0,0,0,12.562,10.2V2.355A2.269,2.269,0,0,0,11.871.691Zm-1.4,5.85a.489.489,0,0,1-.319.482.569.569,0,0,1-.2.041.486.486,0,0,1-.368-.155L8.4,5.732,4.034,10.1a.514.514,0,0,1-.736,0l-.834-.834a.513.513,0,0,1,0-.736L6.831,4.162,5.653,2.984a.472.472,0,0,1-.115-.572.489.489,0,0,1,.482-.319H9.946a.531.531,0,0,1,.523.523V6.541Z" transform="translate(0 0)"/></g></svg>
+											</div>
+										</a>
+									</div>
+										
+									<div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+										<a ref="#" data-toggle="modal" data-target="#emplModal"  class="empl-card">
+											<div class="empl-card__name">Демидова  <br> Анна Михайловна </div>
+											<div class="empl-card__position">Ассистент </div>
+											<div class="empl-card__link-icon">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.559 12.559"><defs><style>.a{fill:#d6d9d9;}</style></defs><g transform="translate(-0.003)"><path class="a" d="M11.871.691A2.268,2.268,0,0,0,10.207,0H2.358A2.269,2.269,0,0,0,.694.691,2.268,2.268,0,0,0,0,2.355V10.2a2.269,2.269,0,0,0,.691,1.664,2.268,2.268,0,0,0,1.664.691h7.849A2.359,2.359,0,0,0,12.562,10.2V2.355A2.269,2.269,0,0,0,11.871.691Zm-1.4,5.85a.489.489,0,0,1-.319.482.569.569,0,0,1-.2.041.486.486,0,0,1-.368-.155L8.4,5.732,4.034,10.1a.514.514,0,0,1-.736,0l-.834-.834a.513.513,0,0,1,0-.736L6.831,4.162,5.653,2.984a.472.472,0,0,1-.115-.572.489.489,0,0,1,.482-.319H9.946a.531.531,0,0,1,.523.523V6.541Z" transform="translate(0 0)"/></g></svg>
+											</div>
+										</a>
+									</div>
+										
+									<div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+										<a ref="#" data-toggle="modal" data-target="#emplModal"  class="empl-card">
+											<div class="empl-card__name">Иванова   <br> Анна Евгеньевна </div>
+											<div class="empl-card__position">Доцент </div>
+											<div class="empl-card__link-icon">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.559 12.559"><defs><style>.a{fill:#d6d9d9;}</style></defs><g transform="translate(-0.003)"><path class="a" d="M11.871.691A2.268,2.268,0,0,0,10.207,0H2.358A2.269,2.269,0,0,0,.694.691,2.268,2.268,0,0,0,0,2.355V10.2a2.269,2.269,0,0,0,.691,1.664,2.268,2.268,0,0,0,1.664.691h7.849A2.359,2.359,0,0,0,12.562,10.2V2.355A2.269,2.269,0,0,0,11.871.691Zm-1.4,5.85a.489.489,0,0,1-.319.482.569.569,0,0,1-.2.041.486.486,0,0,1-.368-.155L8.4,5.732,4.034,10.1a.514.514,0,0,1-.736,0l-.834-.834a.513.513,0,0,1,0-.736L6.831,4.162,5.653,2.984a.472.472,0,0,1-.115-.572.489.489,0,0,1,.482-.319H9.946a.531.531,0,0,1,.523.523V6.541Z" transform="translate(0 0)"/></g></svg>
+											</div>
+										</a>
+									</div>
+										
+									<div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+										<a ref="#" data-toggle="modal" data-target="#emplModal"  class="empl-card">
+											<div class="empl-card__name">Овечкис   <br> Юрий Натанович </div>
+											<div class="empl-card__position">Профессор </div>
+											<div class="empl-card__link-icon">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.559 12.559"><defs><style>.a{fill:#d6d9d9;}</style></defs><g transform="translate(-0.003)"><path class="a" d="M11.871.691A2.268,2.268,0,0,0,10.207,0H2.358A2.269,2.269,0,0,0,.694.691,2.268,2.268,0,0,0,0,2.355V10.2a2.269,2.269,0,0,0,.691,1.664,2.268,2.268,0,0,0,1.664.691h7.849A2.359,2.359,0,0,0,12.562,10.2V2.355A2.269,2.269,0,0,0,11.871.691Zm-1.4,5.85a.489.489,0,0,1-.319.482.569.569,0,0,1-.2.041.486.486,0,0,1-.368-.155L8.4,5.732,4.034,10.1a.514.514,0,0,1-.736,0l-.834-.834a.513.513,0,0,1,0-.736L6.831,4.162,5.653,2.984a.472.472,0,0,1-.115-.572.489.489,0,0,1,.482-.319H9.946a.531.531,0,0,1,.523.523V6.541Z" transform="translate(0 0)"/></g></svg>
+											</div>
+										</a>
+									</div>
+
+									<div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+										<a ref="#" data-toggle="modal" data-target="#emplModal"  class="empl-card">
+											<div class="empl-card__name">Попова <br> Елена Дмитриевна </div>
+											<div class="empl-card__position">Доцент </div>
+											<div class="empl-card__link-icon">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.559 12.559"><defs><style>.a{fill:#d6d9d9;}</style></defs><g transform="translate(-0.003)"><path class="a" d="M11.871.691A2.268,2.268,0,0,0,10.207,0H2.358A2.269,2.269,0,0,0,.694.691,2.268,2.268,0,0,0,0,2.355V10.2a2.269,2.269,0,0,0,.691,1.664,2.268,2.268,0,0,0,1.664.691h7.849A2.359,2.359,0,0,0,12.562,10.2V2.355A2.269,2.269,0,0,0,11.871.691Zm-1.4,5.85a.489.489,0,0,1-.319.482.569.569,0,0,1-.2.041.486.486,0,0,1-.368-.155L8.4,5.732,4.034,10.1a.514.514,0,0,1-.736,0l-.834-.834a.513.513,0,0,1,0-.736L6.831,4.162,5.653,2.984a.472.472,0,0,1-.115-.572.489.489,0,0,1,.482-.319H9.946a.531.531,0,0,1,.523.523V6.541Z" transform="translate(0 0)"/></g></svg>
+											</div>
+										</a>
+									</div>
+
+									<div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+										<a ref="#" data-toggle="modal" data-target="#emplModal"  class="empl-card">
+											<div class="empl-card__name">Смирнова  <br> Галина Константиновна </div>
+											<div class="empl-card__position">Доцент </div>
+											<div class="empl-card__link-icon">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.559 12.559"><defs><style>.a{fill:#d6d9d9;}</style></defs><g transform="translate(-0.003)"><path class="a" d="M11.871.691A2.268,2.268,0,0,0,10.207,0H2.358A2.269,2.269,0,0,0,.694.691,2.268,2.268,0,0,0,0,2.355V10.2a2.269,2.269,0,0,0,.691,1.664,2.268,2.268,0,0,0,1.664.691h7.849A2.359,2.359,0,0,0,12.562,10.2V2.355A2.269,2.269,0,0,0,11.871.691Zm-1.4,5.85a.489.489,0,0,1-.319.482.569.569,0,0,1-.2.041.486.486,0,0,1-.368-.155L8.4,5.732,4.034,10.1a.514.514,0,0,1-.736,0l-.834-.834a.513.513,0,0,1,0-.736L6.831,4.162,5.653,2.984a.472.472,0,0,1-.115-.572.489.489,0,0,1,.482-.319H9.946a.531.531,0,0,1,.523.523V6.541Z" transform="translate(0 0)"/></g></svg>
+											</div>
+										</a>
+									</div>
+
+									<div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+										<a ref="#" data-toggle="modal" data-target="#emplModal"  class="empl-card">
+											<div class="empl-card__name">Чурбанов <br> Валерий Вадимович </div>
+											<div class="empl-card__position">Доцент </div>
+											<div class="empl-card__link-icon">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.559 12.559"><defs><style>.a{fill:#d6d9d9;}</style></defs><g transform="translate(-0.003)"><path class="a" d="M11.871.691A2.268,2.268,0,0,0,10.207,0H2.358A2.269,2.269,0,0,0,.694.691,2.268,2.268,0,0,0,0,2.355V10.2a2.269,2.269,0,0,0,.691,1.664,2.268,2.268,0,0,0,1.664.691h7.849A2.359,2.359,0,0,0,12.562,10.2V2.355A2.269,2.269,0,0,0,11.871.691Zm-1.4,5.85a.489.489,0,0,1-.319.482.569.569,0,0,1-.2.041.486.486,0,0,1-.368-.155L8.4,5.732,4.034,10.1a.514.514,0,0,1-.736,0l-.834-.834a.513.513,0,0,1,0-.736L6.831,4.162,5.653,2.984a.472.472,0,0,1-.115-.572.489.489,0,0,1,.482-.319H9.946a.531.531,0,0,1,.523.523V6.541Z" transform="translate(0 0)"/></g></svg>
+											</div>
+										</a>
+									</div>
+									<div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+										<a ref="#" data-toggle="modal" data-target="#emplModal"  class="empl-card">
+											<div class="empl-card__name">Попов <br> Дмитрий Иванович</div>
+											<div class="empl-card__position">Профессор, зав. кафедрой</div>
+											<div class="empl-card__link-icon">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.559 12.559"><defs><style>.a{fill:#d6d9d9;}</style></defs><g transform="translate(-0.003)"><path class="a" d="M11.871.691A2.268,2.268,0,0,0,10.207,0H2.358A2.269,2.269,0,0,0,.694.691,2.268,2.268,0,0,0,0,2.355V10.2a2.269,2.269,0,0,0,.691,1.664,2.268,2.268,0,0,0,1.664.691h7.849A2.359,2.359,0,0,0,12.562,10.2V2.355A2.269,2.269,0,0,0,11.871.691Zm-1.4,5.85a.489.489,0,0,1-.319.482.569.569,0,0,1-.2.041.486.486,0,0,1-.368-.155L8.4,5.732,4.034,10.1a.514.514,0,0,1-.736,0l-.834-.834a.513.513,0,0,1,0-.736L6.831,4.162,5.653,2.984a.472.472,0,0,1-.115-.572.489.489,0,0,1,.482-.319H9.946a.531.531,0,0,1,.523.523V6.541Z" transform="translate(0 0)"/></g></svg>
+											</div>
+										</a>
+									</div>
+
+									<div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+										<a ref="#" data-toggle="modal" data-target="#emplModal"  class="empl-card">
+											<div class="empl-card__name">Булатников <br> Евгений Владиславович</div>
+											<div class="empl-card__position">Доцент</div>
+											<div class="empl-card__link-icon">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.559 12.559"><defs><style>.a{fill:#d6d9d9;}</style></defs><g transform="translate(-0.003)"><path class="a" d="M11.871.691A2.268,2.268,0,0,0,10.207,0H2.358A2.269,2.269,0,0,0,.694.691,2.268,2.268,0,0,0,0,2.355V10.2a2.269,2.269,0,0,0,.691,1.664,2.268,2.268,0,0,0,1.664.691h7.849A2.359,2.359,0,0,0,12.562,10.2V2.355A2.269,2.269,0,0,0,11.871.691Zm-1.4,5.85a.489.489,0,0,1-.319.482.569.569,0,0,1-.2.041.486.486,0,0,1-.368-.155L8.4,5.732,4.034,10.1a.514.514,0,0,1-.736,0l-.834-.834a.513.513,0,0,1,0-.736L6.831,4.162,5.653,2.984a.472.472,0,0,1-.115-.572.489.489,0,0,1,.482-.319H9.946a.531.531,0,0,1,.523.523V6.541Z" transform="translate(0 0)"/></g></svg>
+											</div>
+										</a>
+									</div>
+
+									<div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+										<a ref="#" data-toggle="modal" data-target="#emplModal"  class="empl-card">
+											<div class="empl-card__name">Белоусов  <br> Игорь Рафаилович</div>
+											<div class="empl-card__position">Профессор</div>
+											<div class="empl-card__link-icon">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.559 12.559"><defs><style>.a{fill:#d6d9d9;}</style></defs><g transform="translate(-0.003)"><path class="a" d="M11.871.691A2.268,2.268,0,0,0,10.207,0H2.358A2.269,2.269,0,0,0,.694.691,2.268,2.268,0,0,0,0,2.355V10.2a2.269,2.269,0,0,0,.691,1.664,2.268,2.268,0,0,0,1.664.691h7.849A2.359,2.359,0,0,0,12.562,10.2V2.355A2.269,2.269,0,0,0,11.871.691Zm-1.4,5.85a.489.489,0,0,1-.319.482.569.569,0,0,1-.2.041.486.486,0,0,1-.368-.155L8.4,5.732,4.034,10.1a.514.514,0,0,1-.736,0l-.834-.834a.513.513,0,0,1,0-.736L6.831,4.162,5.653,2.984a.472.472,0,0,1-.115-.572.489.489,0,0,1,.482-.319H9.946a.531.531,0,0,1,.523.523V6.541Z" transform="translate(0 0)"/></g></svg>
+											</div>
+										</a>
+									</div>
+
+									<div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+										<a ref="#" data-toggle="modal" data-target="#emplModal"  class="empl-card">
+											<div class="empl-card__name">Денисов   <br> Дмитрий Александрович</div>
+											<div class="empl-card__position">Доцент</div>
+											<div class="empl-card__link-icon">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.559 12.559"><defs><style>.a{fill:#d6d9d9;}</style></defs><g transform="translate(-0.003)"><path class="a" d="M11.871.691A2.268,2.268,0,0,0,10.207,0H2.358A2.269,2.269,0,0,0,.694.691,2.268,2.268,0,0,0,0,2.355V10.2a2.269,2.269,0,0,0,.691,1.664,2.268,2.268,0,0,0,1.664.691h7.849A2.359,2.359,0,0,0,12.562,10.2V2.355A2.269,2.269,0,0,0,11.871.691Zm-1.4,5.85a.489.489,0,0,1-.319.482.569.569,0,0,1-.2.041.486.486,0,0,1-.368-.155L8.4,5.732,4.034,10.1a.514.514,0,0,1-.736,0l-.834-.834a.513.513,0,0,1,0-.736L6.831,4.162,5.653,2.984a.472.472,0,0,1-.115-.572.489.489,0,0,1,.482-.319H9.946a.531.531,0,0,1,.523.523V6.541Z" transform="translate(0 0)"/></g></svg>
+											</div>
+										</a>
+									</div>
+
+									<div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+										<a ref="#" data-toggle="modal" data-target="#emplModal"  class="empl-card">
+											<div class="empl-card__name">Мосалев    <br> Павел Михайлович</div>
+											<div class="empl-card__position">Ассистент</div>
+											<div class="empl-card__link-icon">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.559 12.559"><defs><style>.a{fill:#d6d9d9;}</style></defs><g transform="translate(-0.003)"><path class="a" d="M11.871.691A2.268,2.268,0,0,0,10.207,0H2.358A2.269,2.269,0,0,0,.694.691,2.268,2.268,0,0,0,0,2.355V10.2a2.269,2.269,0,0,0,.691,1.664,2.268,2.268,0,0,0,1.664.691h7.849A2.359,2.359,0,0,0,12.562,10.2V2.355A2.269,2.269,0,0,0,11.871.691Zm-1.4,5.85a.489.489,0,0,1-.319.482.569.569,0,0,1-.2.041.486.486,0,0,1-.368-.155L8.4,5.732,4.034,10.1a.514.514,0,0,1-.736,0l-.834-.834a.513.513,0,0,1,0-.736L6.831,4.162,5.653,2.984a.472.472,0,0,1-.115-.572.489.489,0,0,1,.482-.319H9.946a.531.531,0,0,1,.523.523V6.541Z" transform="translate(0 0)"/></g></svg>
+											</div>
+										</a>
+									</div>
+										
+									<div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+										<a ref="#" data-toggle="modal" data-target="#emplModal"  class="empl-card">
+											<div class="empl-card__name">Шурыгин <br> Владимир Николаевич </div>
+											<div class="empl-card__position">Профессор</div>
+											<div class="empl-card__link-icon">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.559 12.559"><defs><style>.a{fill:#d6d9d9;}</style></defs><g transform="translate(-0.003)"><path class="a" d="M11.871.691A2.268,2.268,0,0,0,10.207,0H2.358A2.269,2.269,0,0,0,.694.691,2.268,2.268,0,0,0,0,2.355V10.2a2.269,2.269,0,0,0,.691,1.664,2.268,2.268,0,0,0,1.664.691h7.849A2.359,2.359,0,0,0,12.562,10.2V2.355A2.269,2.269,0,0,0,11.871.691Zm-1.4,5.85a.489.489,0,0,1-.319.482.569.569,0,0,1-.2.041.486.486,0,0,1-.368-.155L8.4,5.732,4.034,10.1a.514.514,0,0,1-.736,0l-.834-.834a.513.513,0,0,1,0-.736L6.831,4.162,5.653,2.984a.472.472,0,0,1-.115-.572.489.489,0,0,1,.482-.319H9.946a.531.531,0,0,1,.523.523V6.541Z" transform="translate(0 0)"/></g></svg>
+											</div>
+										</a>
+									</div>
+										
+									<div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+										<a ref="#" data-toggle="modal" data-target="#emplModal"  class="empl-card">
+											<div class="empl-card__name">Демидова  <br> Анна Михайловна </div>
+											<div class="empl-card__position">Ассистент </div>
+											<div class="empl-card__link-icon">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.559 12.559"><defs><style>.a{fill:#d6d9d9;}</style></defs><g transform="translate(-0.003)"><path class="a" d="M11.871.691A2.268,2.268,0,0,0,10.207,0H2.358A2.269,2.269,0,0,0,.694.691,2.268,2.268,0,0,0,0,2.355V10.2a2.269,2.269,0,0,0,.691,1.664,2.268,2.268,0,0,0,1.664.691h7.849A2.359,2.359,0,0,0,12.562,10.2V2.355A2.269,2.269,0,0,0,11.871.691Zm-1.4,5.85a.489.489,0,0,1-.319.482.569.569,0,0,1-.2.041.486.486,0,0,1-.368-.155L8.4,5.732,4.034,10.1a.514.514,0,0,1-.736,0l-.834-.834a.513.513,0,0,1,0-.736L6.831,4.162,5.653,2.984a.472.472,0,0,1-.115-.572.489.489,0,0,1,.482-.319H9.946a.531.531,0,0,1,.523.523V6.541Z" transform="translate(0 0)"/></g></svg>
+											</div>
+										</a>
+									</div>
+										
+									<div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+										<a ref="#" data-toggle="modal" data-target="#emplModal"  class="empl-card">
+											<div class="empl-card__name">Иванова   <br> Анна Евгеньевна </div>
+											<div class="empl-card__position">Доцент </div>
+											<div class="empl-card__link-icon">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.559 12.559"><defs><style>.a{fill:#d6d9d9;}</style></defs><g transform="translate(-0.003)"><path class="a" d="M11.871.691A2.268,2.268,0,0,0,10.207,0H2.358A2.269,2.269,0,0,0,.694.691,2.268,2.268,0,0,0,0,2.355V10.2a2.269,2.269,0,0,0,.691,1.664,2.268,2.268,0,0,0,1.664.691h7.849A2.359,2.359,0,0,0,12.562,10.2V2.355A2.269,2.269,0,0,0,11.871.691Zm-1.4,5.85a.489.489,0,0,1-.319.482.569.569,0,0,1-.2.041.486.486,0,0,1-.368-.155L8.4,5.732,4.034,10.1a.514.514,0,0,1-.736,0l-.834-.834a.513.513,0,0,1,0-.736L6.831,4.162,5.653,2.984a.472.472,0,0,1-.115-.572.489.489,0,0,1,.482-.319H9.946a.531.531,0,0,1,.523.523V6.541Z" transform="translate(0 0)"/></g></svg>
+											</div>
+										</a>
+									</div>
+										
+									<div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+										<a ref="#" data-toggle="modal" data-target="#emplModal"  class="empl-card">
+											<div class="empl-card__name">Овечкис   <br> Юрий Натанович </div>
+											<div class="empl-card__position">Профессор </div>
+											<div class="empl-card__link-icon">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.559 12.559"><defs><style>.a{fill:#d6d9d9;}</style></defs><g transform="translate(-0.003)"><path class="a" d="M11.871.691A2.268,2.268,0,0,0,10.207,0H2.358A2.269,2.269,0,0,0,.694.691,2.268,2.268,0,0,0,0,2.355V10.2a2.269,2.269,0,0,0,.691,1.664,2.268,2.268,0,0,0,1.664.691h7.849A2.359,2.359,0,0,0,12.562,10.2V2.355A2.269,2.269,0,0,0,11.871.691Zm-1.4,5.85a.489.489,0,0,1-.319.482.569.569,0,0,1-.2.041.486.486,0,0,1-.368-.155L8.4,5.732,4.034,10.1a.514.514,0,0,1-.736,0l-.834-.834a.513.513,0,0,1,0-.736L6.831,4.162,5.653,2.984a.472.472,0,0,1-.115-.572.489.489,0,0,1,.482-.319H9.946a.531.531,0,0,1,.523.523V6.541Z" transform="translate(0 0)"/></g></svg>
+											</div>
+										</a>
+									</div>
+
+									<div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+										<a ref="#" data-toggle="modal" data-target="#emplModal"  class="empl-card">
+											<div class="empl-card__name">Попова <br> Елена Дмитриевна </div>
+											<div class="empl-card__position">Доцент </div>
+											<div class="empl-card__link-icon">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.559 12.559"><defs><style>.a{fill:#d6d9d9;}</style></defs><g transform="translate(-0.003)"><path class="a" d="M11.871.691A2.268,2.268,0,0,0,10.207,0H2.358A2.269,2.269,0,0,0,.694.691,2.268,2.268,0,0,0,0,2.355V10.2a2.269,2.269,0,0,0,.691,1.664,2.268,2.268,0,0,0,1.664.691h7.849A2.359,2.359,0,0,0,12.562,10.2V2.355A2.269,2.269,0,0,0,11.871.691Zm-1.4,5.85a.489.489,0,0,1-.319.482.569.569,0,0,1-.2.041.486.486,0,0,1-.368-.155L8.4,5.732,4.034,10.1a.514.514,0,0,1-.736,0l-.834-.834a.513.513,0,0,1,0-.736L6.831,4.162,5.653,2.984a.472.472,0,0,1-.115-.572.489.489,0,0,1,.482-.319H9.946a.531.531,0,0,1,.523.523V6.541Z" transform="translate(0 0)"/></g></svg>
+											</div>
+										</a>
+									</div>
+
+									<div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+										<a ref="#" data-toggle="modal" data-target="#emplModal"  class="empl-card">
+											<div class="empl-card__name">Смирнова  <br> Галина Константиновна </div>
+											<div class="empl-card__position">Доцент </div>
+											<div class="empl-card__link-icon">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.559 12.559"><defs><style>.a{fill:#d6d9d9;}</style></defs><g transform="translate(-0.003)"><path class="a" d="M11.871.691A2.268,2.268,0,0,0,10.207,0H2.358A2.269,2.269,0,0,0,.694.691,2.268,2.268,0,0,0,0,2.355V10.2a2.269,2.269,0,0,0,.691,1.664,2.268,2.268,0,0,0,1.664.691h7.849A2.359,2.359,0,0,0,12.562,10.2V2.355A2.269,2.269,0,0,0,11.871.691Zm-1.4,5.85a.489.489,0,0,1-.319.482.569.569,0,0,1-.2.041.486.486,0,0,1-.368-.155L8.4,5.732,4.034,10.1a.514.514,0,0,1-.736,0l-.834-.834a.513.513,0,0,1,0-.736L6.831,4.162,5.653,2.984a.472.472,0,0,1-.115-.572.489.489,0,0,1,.482-.319H9.946a.531.531,0,0,1,.523.523V6.541Z" transform="translate(0 0)"/></g></svg>
+											</div>
+										</a>
+									</div>
+
+
+										
+								
+								</div>
+							</div>
+						</div>
+					</section>
+
+		</main>
+
+    <footer class="s-footer s-footer_empl" id="footerEmpl">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 col-md-5">
+						<div class="footer__copyright-info">
+							<div class="footer__polytech">
+								<div class="logo"></div>
+								<span class="footer__copyright-tetx">
+									© Кафедра информатики и информационный технологий 2019
+								</span>
+							</div>
+							<address class="footer__dev-info">
+								Developed by <a class="link" href="#">Resetand</a>  2019
+							</address>
+						</div>
+					</div>
+					<div class="col-12 col-md-4">
+						<div class="footer__phone">
+							<span class="footer__phone-title">Контактный телефон:</span>
+							<ul class="footer-list">
+								<li>+7 (499) 976-14-70 - приёмная директора</li>
+								<li>+7 (499) 976-06-35 - факс</li>
+								<li>+7 (495) 223-05-22 -  приёмная комиссия</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-12 col-md-3">
+						<div class="footer__adress">
+							<span class="footer__adress-title">Адрес:</span>
+							<ul class="footer-list">
+								<li>ул. Прянишникова, д. 2А
+									Москва, 127550</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<div class="preloader" id="preloader">
+			<div class="lds-css ng-scope"><div style="width:100%;height:100%" class="lds-double-ring"><div></div><div></div></div>
+		</div>
+		<script>
+					window.onload = function() {
+					var fadeTarget = document.getElementById("preloader");
+					fadeTarget.style.display = "none";
+					// var fadeEffect = setInterval(function () {
+					// 		if (!fadeTarget.style.opacity) {
+					// 				fadeTarget.style.opacity = 1;
+					// 		}
+					// 		if (fadeTarget.style.opacity > 0) {
+					// 				fadeTarget.style.opacity -= 0.1;
+					// 		} else {
+					// 				fadeTarget.style.display = "none";
+					// 				clearInterval(fadeEffect);
+					// 		}
+					// }, 10);
+				}
+			</script>
+		<script src="./js/libs.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="./js/main.js"></script>
+	</body>
+	</html>
+
