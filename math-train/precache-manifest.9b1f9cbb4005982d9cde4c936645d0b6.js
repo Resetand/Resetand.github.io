@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "c68ddea4802dfaa66488",
-    "url": "/math-train/css/app.75e8b785.css"
+    "revision": "7024fb82dd1edb8697f9",
+    "url": "/math-train/css/app.96cb5963.css"
   },
   {
-    "revision": "c68ddea4802dfaa66488",
-    "url": "/math-train/js/app.ab2f4c86.js"
+    "revision": "7024fb82dd1edb8697f9",
+    "url": "/math-train/js/app.970f8247.js"
   },
   {
     "revision": "3253b81e8a2339ee8c35",
@@ -48,7 +48,7 @@ self.__precacheManifest = [
     "url": "/math-train/fonts/MaterialIcons-Regular.da4ea5cd.ttf"
   },
   {
-    "revision": "c02a555bba4a857272505b96aba4df52",
+    "revision": "6b942318250bd1e8216a6827009fced4",
     "url": "/math-train/index.html"
   },
   {

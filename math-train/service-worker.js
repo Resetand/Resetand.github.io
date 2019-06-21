@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/math-train/precache-manifest.13ae7e742d75fcc4986dfe8808232446.js"
+  "/math-train/precache-manifest.9b1f9cbb4005982d9cde4c936645d0b6.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "math-trainer"});
