@@ -1,7 +1,6 @@
 {
   "short_name": "React App",
   "name": "Create React App Sample",
-  "homepage": "https://Resetand.github.io/react-todo",
   "icons": [
     {
       "src": "favico.png",
