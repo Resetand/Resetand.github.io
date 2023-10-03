@@ -25,15 +25,6 @@ const main = () => {
     SECONDS_EL.innerHTML = sec;
     MILLISECONDS_EL.innerHTML = ms;
 
-    console.log({
-        timeRemaining,
-        days,
-        hours,
-        min,
-        sec,
-        ms,
-    });
-
     // using requestAnimationFrame to update the countdown
 
     if (timeRemaining > 0) {
