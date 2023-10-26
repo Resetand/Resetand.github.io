@@ -17,7 +17,7 @@ const main = () => {
     const sec = formatTime(Math.floor((timeRemaining % (1000 * 60)) / 1000));
     const ms = formatTime(Math.floor((timeRemaining % 1000) / 10));
 
-    document.title = `Thai in ${days}d, ${hours}h, ${min}m, ${sec}s`;
+    document.title = `Свобода через ${days}д, ${hours}ч, ${min}м, ${sec}с`;
 
     DAYS_EL.innerHTML = days;
     HOURS_EL.innerHTML = hours;
