@@ -1,4 +1,4 @@
-const MAIN_DATE = Date.UTC(2023, 12, 29, 0, 0, 0, 0);
+const MAIN_DATE = Date.UTC(2023, 12, 28, 21, 0, 0, 0);
 
 const DAYS_EL = document.getElementById("cd-days");
 const HOURS_EL = document.getElementById("cd-hours");
